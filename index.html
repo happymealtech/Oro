@@ -6,112 +6,27 @@
     <title>Cresci Gioielleria | Stellar Luxury</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            letter-spacing: 2px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
-            font-weight: 300;
-            color: #888;
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .product-card {
-            text-align: center;
-            transition: transform 0.3s ease;
-            padding: 20px;
-            border: 1px solid transparent;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border: 1px solid #f0f0f0;
-        }
-
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background-color: #f9f9f9;
-            margin-bottom: 15px;
-        }
-
-        .product-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            margin: 10px 0 5px;
-        }
-
-        .product-price {
-            font-weight: 400;
-            color: #d4af37;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .btn-buy {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background 0.3s;
-            width: 100%;
-        }
-
-        .btn-buy:hover {
-            background-color: #d4af37;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #aaa;
-            border-top: 1px solid #eee;
-            margin-top: 60px;
-        }
+        body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1a1a1a; margin: 0; padding: 0; }
+        header { text-align: center; padding: 60px 20px; border-bottom: 1px solid #eee; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; letter-spacing: 2px; margin: 0; text-transform: uppercase; }
+        .subtitle { font-weight: 300; color: #888; margin-top: 10px; letter-spacing: 1px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .product-card { text-align: center; transition: transform 0.3s ease; padding: 20px; border: 1px solid #f9f9f9; }
+        .product-card:hover { transform: translateY(-5px); border: 1px solid #d4af37; }
+        .product-image { width: 100%; height: 250px; object-fit: cover; background-color: #f9f9f9; margin-bottom: 15px; border-radius: 2px; }
+        .product-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin: 10px 0 5px; }
+        .product-price { font-weight: 400; color: #d4af37; margin-bottom: 15px; font-size: 1.1rem; }
+        .btn-buy { background-color: #1a1a1a; color: white; padding: 12px 25px; border: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: background 0.3s; width: 100%; }
+        .btn-buy:hover { background-color: #d4af37; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; margin-top: 60px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Cresci Gioielleria</h1>
-        <div class="subtitle">Esclusività su Blockchain Stellar</div>
+        <div class="subtitle">Luxury Assets on Stellar Blockchain</div>
     </header>
 
     <div class="container">
@@ -119,15 +34,100 @@
             
             <div class="product-card">
                 <img src="oro.jpg" alt="Oro" class="product-image">
-                <div class="product-name">Lingotto Oro 24K</div>
-                <div class="product-price">1
+                <div class="product-name">Oro 24K</div>
+                <div class="product-price">10 XLM / gr</div>
+                <button class="btn-buy" onclick="paga('GOLD', '10')">Acquista con Albedo</button>
+            </div>
 
-  
+            <div class="product-card">
+                <img src="slvr.jpg" alt="Argento" class="product-image">
+                <div class="product-name">Argento Sterling</div>
+                <div class="product-price">2 XLM / gr</div>
+                <button class="btn-buy" onclick="paga('SLVR', '2')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="diam.jpg" alt="Diamante" class="product-image">
+                <div class="product-name">Diamante Certificato</div>
+                <div class="product-price">100 XLM</div>
+                <button class="btn-buy" onclick="paga('DIAM', '100')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="emer.jpg" alt="Smeraldo" class="product-image">
+                <div class="product-name">Smeraldo Colombiano</div>
+                <div class="product-price">85 XLM</div>
+                <button class="btn-buy" onclick="paga('EMER', '85')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="ruby.jpg" alt="Rubino" class="product-image">
+                <div class="product-name">Rubino Birmano</div>
+                <div class="product-price">90 XLM</div>
+                <button class="btn-buy" onclick="paga('RUBY', '90')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="zaff.jpg" alt="Zaffiro" class="product-image">
+                <div class="product-name">Zaffiro Reale</div>
+                <div class="product-price">80 XLM</div>
+                <button class="btn-buy" onclick="paga('SAPP', '80')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="plat.jpg" alt="Platino" class="product-image">
+                <div class="product-name">Platino Puro</div>
+                <div class="product-price">120 XLM</div>
+                <button class="btn-buy" onclick="paga('PLAT', '120')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="perla.jpg" alt="Perla" class="product-image">
+                <div class="product-name">Perla Naturale</div>
+                <div class="product-price">35 XLM</div>
+                <button class="btn-buy" onclick="paga('PEARL', '35')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="rolex.jpg" alt="Orologio" class="product-image">
+                <div class="product-name">Orologio di Lusso</div>
+                <div class="product-price">250 XLM</div>
+                <button class="btn-buy" onclick="paga('WATCH', '250')">Acquista con Albedo</button>
+            </div>
+
+            <div class="product-card">
+                <img src="fede (2).jpg" alt="Fede" class="product-image">
+                <div class="product-name">Fede Artigianale</div>
+                <div class="product-price">50 XLM</div>
+                <button class="btn-buy" onclick="paga('RING', '50')">Acquista con Albedo</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Cresci Gioielleria | Distributor: GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI
+    </footer>
+
+    <script src="https://albedo.link/v1/albedo.js"></script>
+    <script>
+        async function paga(token, prezzo) {
+            try {
+                await albedo.pay({
+                    amount: prezzo,
+                    destination: "GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI",
+                    network: 'testnet',
+                    memo: "Acquisto_" + token
+                });
+                alert("Pagamento inviato! Richiesta per " + token + " inoltrata alla blockchain.");
+            } catch (err) {
+                alert("Operazione annullata.");
+            }
+        }
+    </script>
+</body>
+</html>
      
-     
-
-  
-
           
 
       
