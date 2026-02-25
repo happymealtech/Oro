@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         .product-image { width: 100%; height: 250px; object-fit: cover; background-color: #f9f9f9; margin-bottom: 15px; border-radius: 2px; }
         .product-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin: 10px 0 5px; }
         .product-price { font-weight: 400; color: #d4af37; margin-bottom: 15px; font-size: 1.1rem; }
-        .btn-buy { background-color: #1a1a1a; color: white; padding: 12px 25px; border: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: background 0.3s; width: 100%; }
+        .btn-buy { background-color: #1a1a1a; color: white; padding: 12px 25px; border: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: background 0.3s; width: 100%; text-decoration: none; display: block; }
         .btn-buy:hover { background-color: #d4af37; }
         footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; margin-top: 60px; }
     </style>
@@ -30,105 +30,41 @@
     </header>
 
     <div class="container">
-        <div class="grid">
-            
-            <div class="product-card">
-                <img src="oro.jpg" alt="Oro" class="product-image">
-                <div class="product-name">Oro 24K</div>
-                <div class="product-price">10 XLM / gr</div>
-                <button class="btn-buy" onclick="paga('GOLD', '10')">Acquista con Albedo</button>
-            </div>
+        <div class="grid" id="product-grid">
+            <script>
+                const tokens = [
+                    { id: 'GOLD', name: 'Oro 24K', price: '10', img: 'oro.jpg' },
+                    { id: 'SLVR', name: 'Argento Sterling', price: '2', img: 'slvr.jpg' },
+                    { id: 'DIAM', name: 'Diamante Certificato', price: '100', img: 'diam.jpg' },
+                    { id: 'EMER', name: 'Smeraldo Colombiano', price: '85', img: 'emer.jpg' },
+                    { id: 'RUBY', name: 'Rubino Birmano', price: '90', img: 'ruby.jpg' },
+                    { id: 'SAPP', name: 'Zaffiri Reali', price: '80', img: 'zaff.jpg' },
+                    { id: 'PLAT', name: 'Platino Puro', price: '120', img: 'plat.jpg' },
+                    { id: 'PEARL', name: 'Perla Naturale', price: '35', img: 'perla.jpg' },
+                    { id: 'WATCH', name: 'Orologio di Lusso', price: '250', img: 'rolex.jpg' },
+                    { id: 'RING', name: 'Fede Artigianale', price: '50', img: 'fede (2).jpg' }
+                ];
 
-            <div class="product-card">
-                <img src="slvr.jpg" alt="Argento" class="product-image">
-                <div class="product-name">Argento Sterling</div>
-                <div class="product-price">2 XLM / gr</div>
-                <button class="btn-buy" onclick="paga('SLVR', '2')">Acquista con Albedo</button>
-            </div>
+                const dest = "GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI";
 
-            <div class="product-card">
-                <img src="diam.jpg" alt="Diamante" class="product-image">
-                <div class="product-name">Diamante Certificato</div>
-                <div class="product-price">100 XLM</div>
-                <button class="btn-buy" onclick="paga('DIAM', '100')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="emer.jpg" alt="Smeraldo" class="product-image">
-                <div class="product-name">Smeraldo Colombiano</div>
-                <div class="product-price">85 XLM</div>
-                <button class="btn-buy" onclick="paga('EMER', '85')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="ruby.jpg" alt="Rubino" class="product-image">
-                <div class="product-name">Rubino Birmano</div>
-                <div class="product-price">90 XLM</div>
-                <button class="btn-buy" onclick="paga('RUBY', '90')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="zaff.jpg" alt="Zaffiro" class="product-image">
-                <div class="product-name">Zaffiro Reale</div>
-                <div class="product-price">80 XLM</div>
-                <button class="btn-buy" onclick="paga('SAPP', '80')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="plat.jpg" alt="Platino" class="product-image">
-                <div class="product-name">Platino Puro</div>
-                <div class="product-price">120 XLM</div>
-                <button class="btn-buy" onclick="paga('PLAT', '120')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="perla.jpg" alt="Perla" class="product-image">
-                <div class="product-name">Perla Naturale</div>
-                <div class="product-price">35 XLM</div>
-                <button class="btn-buy" onclick="paga('PEARL', '35')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="rolex.jpg" alt="Orologio" class="product-image">
-                <div class="product-name">Orologio di Lusso</div>
-                <div class="product-price">250 XLM</div>
-                <button class="btn-buy" onclick="paga('WATCH', '250')">Acquista con Albedo</button>
-            </div>
-
-            <div class="product-card">
-                <img src="fede (2).jpg" alt="Fede" class="product-image">
-                <div class="product-name">Fede Artigianale</div>
-                <div class="product-price">50 XLM</div>
-                <button class="btn-buy" onclick="paga('RING', '50')">Acquista con Albedo</button>
-            </div>
-
+                document.getElementById('product-grid').innerHTML = tokens.map(t => `
+                    <div class="product-card">
+                        <img src="${t.img}" alt="${t.name}" class="product-image">
+                        <div class="product-name">${t.name}</div>
+                        <div class="product-price">${t.price} XLM</div>
+                        <a href="https://stellar.expert/explorer/testnet/tx-signer?destination=${dest}&amount=${t.price}&memo=Buy_${t.id}" 
+                           target="_blank" class="btn-buy">Acquista con Lobstr/Wallet</a>
+                    </div>
+                `).join('');
+            </script>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Cresci Gioielleria | Distributor: GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI
+        &copy; 2026 Cresci Gioielleria | Emittente: GCPPKUZL...AR42
     </footer>
-
-    <script src="https://albedo.link/v1/albedo.js"></script>
-    <script>
-        async function paga(token, prezzo) {
-            try {
-                await albedo.pay({
-                    amount: prezzo,
-                    destination: "GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI",
-                    network: 'testnet',
-                    memo: "Acquisto_" + token
-                });
-                alert("Pagamento inviato! Richiesta per " + token + " inoltrata alla blockchain.");
-            } catch (err) {
-                alert("Operazione annullata.");
-            }
-        }
-    </script>
 </body>
 </html>
-     
+            
           
-
-      
      
