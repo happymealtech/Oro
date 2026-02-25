@@ -1,0 +1,83 @@
+# File di configurazione Stellar per la Gioielleria di Curatori1
+# Emittente: GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42
+# Distributore: GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI
+
+ACCOUNTS=[
+  "GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42",
+  "GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI"
+]
+
+[DOCUMENTATION]
+ORG_NAME="Gioielleria Blockchain "
+ORG_URL="https://happymealtech.github.io/Oro/"
+ORG_DESCRIPTION="Vetrina digitale di preziosi su Stellar - Foundation & Soroban Prep"
+
+[[CURRENCIES]]
+code="GOLD"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=2
+name="Oro 24K"
+desc="Grammi di oro puro certificato"
+
+[[CURRENCIES]]
+code="SLVR"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=2
+name="Argento"
+desc="Argento Sterling 925"
+
+[[CURRENCIES]]
+code="DIAM"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Diamanti"
+desc="Diamanti taglio brillante certificati"
+
+[[CURRENCIES]]
+code="EMER"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Smeraldi"
+desc="Smeraldi Colombiani"
+
+[[CURRENCIES]]
+code="RUBY"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Rubini"
+desc="Rubini Birmani"
+
+[[CURRENCIES]]
+code="SAPP"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Zaffiri"
+desc="Zaffiri Reali"
+
+[[CURRENCIES]]
+code="PLAT"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=2
+name="Platino"
+desc="Platino Puro"
+
+[[CURRENCIES]]
+code="PEARL"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Perle"
+desc="Perle Naturali"
+
+[[CURRENCIES]]
+code="WATCH"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Orologi"
+desc="Orologi di alta gamma"
+
+[[CURRENCIES]]
+code="RING"
+issuer="GCPPKUZLIDOMTA3TGNQ3ISN7Q5UGP7ISW2PVGJYDESXHJFXEBNWYAR42"
+display_decimals=0
+name="Anelli"
+desc="Fedi e anelli artigianali"
