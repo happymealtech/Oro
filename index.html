@@ -1,70 +1,109 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cresci Gioielleria | Stellar Luxury</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Curatori1 - Luxury Hair Salon & Assets</title>
     <style>
-        body { font-family: 'Lato', sans-serif; background-color: #ffffff; color: #1a1a1a; margin: 0; padding: 0; }
-        header { text-align: center; padding: 60px 20px; border-bottom: 1px solid #eee; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; letter-spacing: 2px; margin: 0; text-transform: uppercase; }
-        .subtitle { font-weight: 300; color: #888; margin-top: 10px; letter-spacing: 1px; }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .product-card { text-align: center; transition: transform 0.3s ease; padding: 20px; border: 1px solid #f9f9f9; }
-        .product-card:hover { transform: translateY(-5px); border: 1px solid #d4af37; }
-        .product-image { width: 100%; height: 250px; object-fit: cover; background-color: #f9f9f9; margin-bottom: 15px; border-radius: 2px; }
-        .product-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin: 10px 0 5px; }
-        .product-price { font-weight: 400; color: #d4af37; margin-bottom: 15px; font-size: 1.1rem; }
-        .btn-buy { background-color: #1a1a1a; color: white; padding: 12px 25px; border: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; cursor: pointer; transition: background 0.3s; width: 100%; text-decoration: none; display: block; }
-        .btn-buy:hover { background-color: #d4af37; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #aaa; border-top: 1px solid #eee; margin-top: 60px; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        header { text-align: center; padding: 40px; background: #fff; margin-bottom: 20px; border-radius: 8px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 15px; }
+        .card h3 { margin: 10px 0; color: #333; }
+        .card p { font-size: 12px; color: #777; }
+        .price { font-weight: bold; font-size: 18px; color: #b8971e; margin: 10px 0; }
+        .buy-btn { background: #b8971e; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Cresci Gioielleria</h1>
-        <div class="subtitle">Luxury Assets on Stellar Blockchain</div>
-    </header>
+<header>
+    <h1>Curatori1 Hair Salon</h1>
+    <p>Luxury Assets on Stellar Blockchain - Powered by Soroban</p>
+</header>
 
-    <div class="container">
-        <div class="grid" id="product-grid">
-            <script>
-                const tokens = [
-                    { id: 'GOLD', name: 'Oro 24K', price: '10', img: 'oro.jpg' },
-                    { id: 'SLVR', name: 'Argento Sterling', price: '2', img: 'slvr.jpg' },
-                    { id: 'DIAM', name: 'Diamante Certificato', price: '100', img: 'diam.jpg' },
-                    { id: 'EMER', name: 'Smeraldo Colombiano', price: '85', img: 'emer.jpg' },
-                    { id: 'RUBY', name: 'Rubino Birmano', price: '90', img: 'ruby.jpg' },
-                    { id: 'SAPP', name: 'Zaffiri Reali', price: '80', img: 'zaff.jpg' },
-                    { id: 'PLAT', name: 'Platino Puro', price: '120', img: 'plat.jpg' },
-                    { id: 'PEARL', name: 'Perla Naturale', price: '35', img: 'perla.jpg' },
-                    { id: 'WATCH', name: 'Orologio di Lusso', price: '250', img: 'rolex.jpg' },
-                    { id: 'RING', name: 'Fede Artigianale', price: '50', img: 'fede (2).jpg' }
-                ];
-
-                const dest = "GCIA4KR7E2FW2LR6OLGV72DH3RQGFDVPEOGRJUKRF3DOL4WJ7UQOPWFI";
-
-                document.getElementById('product-grid').innerHTML = tokens.map(t => `
-                    <div class="product-card">
-                        <img src="${t.img}" alt="${t.name}" class="product-image">
-                        <div class="product-name">${t.name}</div>
-                        <div class="product-price">${t.price} XLM</div>
-                        <a href="https://stellar.expert/explorer/testnet/tx-signer?destination=${dest}&amount=${t.price}&memo=Buy_${t.id}" 
-                           target="_blank" class="btn-buy">Acquista con Lobstr/Wallet</a>
-                    </div>
-                `).join('');
-            </script>
-        </div>
+<div class="grid-container">
+    <div class="card">
+        <img src="oro.jpg" alt="GOLD">
+        <h3>GOLD</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">1,000 Units</div>
+        <button class="buy-btn">Acquista</button>
     </div>
 
-    <footer>
-        &copy; 2026 Cresci Gioielleria | Emittente: GCPPKUZL...AR42
-    </footer>
+    <div class="card">
+        <img src="slvr.jpg" alt="SILVP">
+        <h3>SILVP</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">1,000 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="oro.jpg" alt="BARP">
+        <h3>BARP</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">400 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="fede (2).jpg" alt="RING">
+        <h3>RING</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">300 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="diam.jpg" alt="DIAM">
+        <h3>DIAM</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">300 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="emer.jpg" alt="EMER">
+        <h3>EMER</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">200 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="rolex.jpg" alt="WATCH">
+        <h3>WATCH</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">200 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="perla.jpg" alt="PEARL">
+        <h3>PEARL</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">100 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="plat.jpg" alt="PLATT">
+        <h3>PLATT</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">10 Units</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+
+    <div class="card">
+        <img src="ruby.jpg" alt="RUBY">
+        <h3>RUBY</h3>
+        <p>Issuer: GD22...XSQK</p>
+        <div class="price">Disponibilità: 0</div>
+        <button class="buy-btn">Acquista</button>
+    </div>
+</div>
+
 </body>
 </html>
-            
-          
-     
