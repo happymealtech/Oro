@@ -3,112 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curatori1 - Luxury Storefront</title>
+    <title>Storefront</title>
     <style>
-        :root { --gold: #b8971e; --dark: #1a1a1a; --light: #f8f9fa; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: var(--light); }
+        body { font-family: sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: #f0f0f0; }
         
-        /* Header come da foto */
-        header { background: var(--dark); color: white; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); }
-        .logo-area { display: flex; flex-direction: column; }
-        .connect-btn { background: var(--gold); border: none; padding: 8px 15px; color: white; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        /* Header */
+        header { background: #1a1a1a; color: #b8971e; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .connect-wallet { background: #b8971e; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
 
-        /* Layout principale: Sidebar + Contenuto */
-        .main-container { display: flex; flex: 1; overflow: hidden; }
+        .main-layout { display: flex; flex: 1; overflow: hidden; }
 
-        /* Sidebar sinistra (Voci richieste) */
-        nav.sidebar { width: 220px; background: white; padding: 20px; border-right: 1px solid #ddd; display: flex; flex-direction: column; gap: 15px; }
-        .sidebar h4 { font-size: 14px; color: #888; text-transform: uppercase; margin-bottom: 5px; }
-        .sidebar a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 15px; }
-        .sidebar a:hover { color: var(--gold); }
+        /* Sidebar sinistra (Voci come da foto) */
+        .sidebar { width: 200px; background: white; padding: 20px; border-right: 1px solid #ddd; }
+        .sidebar-item { margin-bottom: 15px; font-size: 14px; color: #333; cursor: pointer; }
+        .sidebar-title { font-weight: bold; text-transform: uppercase; color: #888; margin-bottom: 10px; font-size: 12px; }
 
-        /* Griglia Prodotti */
-        .content { flex: 1; padding: 30px; overflow-y: auto; background: #ececec; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 15px; border-radius: 5px; text-align: center; position: relative; border: 1px solid #eee; }
-        .card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 10px; }
-        .card h3 { font-size: 16px; margin: 5px 0; }
-        .price-tag { color: var(--gold); font-weight: bold; margin: 10px 0; border-top: 1px solid #eee; padding-top: 10px; }
-        .verified { font-size: 10px; color: green; display: block; margin-bottom: 5px; }
+        /* Griglia Centrale */
+        .content { flex: 1; padding: 20px; overflow-y: auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .card { background: white; padding: 15px; border-radius: 4px; text-align: center; border: 1px solid #ddd; }
+        .card img { width: 100%; height: 120px; object-fit: contain; }
+        .asset-name { font-weight: bold; margin: 10px 0; }
+        .asset-price { color: #b8971e; font-weight: bold; margin-bottom: 10px; }
+        .buy-btn { background: #b8971e; color: white; border: none; width: 100%; padding: 8px; cursor: pointer; }
 
-        /* Footer (Voci in basso richieste) */
-        footer { background: white; padding: 10px 40px; display: flex; justify-content: center; gap: 30px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
-        footer span { cursor: pointer; }
-        footer span:hover { color: var(--gold); }
+        /* Footer basso (Voci come da foto) */
+        footer { background: white; padding: 15px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #ddd; font-size: 12px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-area">
-        <span style="font-weight: bold; letter-spacing: 2px;">CURATORI1</span>
-        <span style="font-size: 10px; color: var(--gold);">Luxury Assets on Stellar</span>
-    </div>
-    <div style="text-align: center;">
-        <h2 style="margin: 0; font-size: 18px;">Curatori1 Storefront</h2>
-        <span style="font-size: 11px;">Powered by Soroban Smart Contracts</span>
-    </div>
-    <button class="connect-btn">Connect Wallet</button>
+    <div></div>
+    <div style="text-align: center;"><strong>STOREFRONT ASSETS</strong></div>
+    <button class="connect-wallet">Connect Wallet</button>
 </header>
 
-<div class="main-container">
+<div class="main-layout">
     <nav class="sidebar">
-        <h4>Store</h4>
-        <a href="#">Tutti i Prodotti</a>
-        <a href="#">In Vendita</a>
-        <a href="#">In Vetrina</a>
-        <hr width="100%">
-        <h4>Categorie</h4>
-        <a href="#">Metalli Preziosi</a>
-        <a href="#">Orologi</a>
-        <a href="#">Pietre</a>
-        <a href="#">Servizi Salon</a>
+        <div class="sidebar-title">Store</div>
+        <div class="sidebar-item">Tutti i Prodotti</div>
+        <div class="sidebar-item">In Vendita</div>
+        <div class="sidebar-item">In Vetrina</div>
+        <hr>
+        <div class="sidebar-title">Categorie</div>
+        <div class="sidebar-item">Metalli</div>
+        <div class="sidebar-item">Pietre</div>
+        <div class="sidebar-item">Orologi</div>
     </nav>
 
     <main class="content">
         <div class="grid">
             <div class="card">
-                <span class="verified">✓ VERIFIED STELLAR</span>
-                <img src="oro.jpg" alt="GOLD">
-                <h3>GOLD</h3>
-                <div class="price-tag">1,000 Units</div>
-                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+                <img src="oro.jpg">
+                <div class="asset-name">GOLD</div>
+                <div class="asset-price">1,000 Units</div>
+                <button class="buy-btn">Acquista</button>
             </div>
-
             <div class="card">
-                <span class="verified">✓ VERIFIED STELLAR</span>
-                <img src="diam.jpg" alt="DIAM">
-                <h3>DIAM</h3>
-                <div class="price-tag">300 Units</div>
-                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+                <img src="slvr.jpg">
+                <div class="asset-name">SILVP</div>
+                <div class="asset-price">1,000 Units</div>
+                <button class="buy-btn">Acquista</button>
             </div>
-
             <div class="card">
-                <span class="verified">✓ VERIFIED STELLAR</span>
-                <img src="rolex.jpg" alt="WATCH">
-                <h3>WATCH</h3>
-                <div class="price-tag">200 Units</div>
-                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+                <img src="oro.jpg">
+                <div class="asset-name">BARP</div>
+                <div class="asset-price">400 Units</div>
+                <button class="buy-btn">Acquista</button>
             </div>
-
             <div class="card">
-                <span class="verified">✓ VERIFIED STELLAR</span>
-                <img src="ruby.jpg" alt="RUBY">
-                <h3>RUBY</h3>
-                <div class="price-tag">Disponibilità: 0</div>
-                <button class="connect-btn" style="width: 100%; border-radius: 5px; background: #ccc;">Esaurito</button>
+                <img src="fede (2).jpg">
+                <div class="asset-name">RING</div>
+                <div class="asset-price">300 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="diam.jpg">
+                <div class="asset-name">DIAM</div>
+                <div class="asset-price">300 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="emer.jpg">
+                <div class="asset-name">EMER</div>
+                <div class="asset-price">200 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="rolex.jpg">
+                <div class="asset-name">WATCH</div>
+                <div class="asset-price">200 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="perla.jpg">
+                <div class="asset-name">PEARL</div>
+                <div class="asset-price">100 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="plat.jpg">
+                <div class="asset-name">PLATT</div>
+                <div class="asset-price">10 Units</div>
+                <button class="buy-btn">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="ruby.jpg">
+                <div class="asset-name">RUBY</div>
+                <div class="asset-price">0 Units</div>
+                <button class="buy-btn" style="background:#ccc">Esaurito</button>
             </div>
         </div>
     </main>
 </div>
 
 <footer>
-    <span>Termini e Condizioni Blockchain</span>
+    <span>Termini e Condizioni</span>
     <span>Tracciabilità Asset</span>
     <span>Smart Contracts Audit</span>
-    <span>Contatti Curatori1</span>
+    <span>Contatti</span>
 </footer>
 
 </body>
 </html>
- 
