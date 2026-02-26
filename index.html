@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storefront Assets - Curatori1</title>
+    <title>Storefront Assets</title>
     <style>
         body { font-family: sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: #f0f0f0; }
         header { background: #1a1a1a; color: #b8971e; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #b8971e; }
@@ -11,19 +12,17 @@
         .main-layout { display: flex; flex: 1; overflow: hidden; }
         .sidebar { width: 220px; background: white; padding: 20px; border-right: 1px solid #ddd; }
         .sidebar-title { font-weight: bold; text-transform: uppercase; color: #888; margin-bottom: 10px; font-size: 12px; }
-        .sidebar-item { margin-bottom: 15px; font-size: 14px; color: #333; cursor: pointer; }
+        .sidebar-item { margin-bottom: 15px; font-size: 14px; color: #333; cursor: pointer; transition: 0.3s; }
+        .sidebar-item:hover { color: #b8971e; font-weight: bold; }
         .content { flex: 1; padding: 20px; overflow-y: auto; background: #e5e5e5; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
         .card { background: white; padding: 15px; border-radius: 4px; text-align: center; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .card img { width: 100%; height: 140px; object-fit: contain; margin-bottom: 10px; }
         .asset-name { font-weight: bold; font-size: 16px; margin: 5px 0; }
         .asset-price { color: #b8971e; font-weight: bold; margin-bottom: 10px; font-size: 18px; }
-        
-        /* Stile pulsanti */
         .btn-group { display: flex; flex-direction: column; gap: 8px; }
-        .buy-stellar { background: #b8971e; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 12px; }
-        .buy-paypal { background: #0070ba; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 12px; }
-        
+        .buy-stellar { background: #b8971e; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 11px; }
+        .buy-paypal { background: #0070ba; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 11px; }
         footer { background: white; padding: 15px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
     </style>
 </head>
@@ -38,19 +37,19 @@
 <div class="main-layout">
     <nav class="sidebar">
         <div class="sidebar-title">Store</div>
-        <div class="sidebar-item">Tutti i Prodotti</div>
+        <div class="sidebar-item" onclick="filtra('tutti')">Tutti i Prodotti</div>
         <div class="sidebar-item">In Vendita</div>
         <div class="sidebar-item">In Vetrina</div>
         <hr>
         <div class="sidebar-title">Categorie</div>
-        <div class="sidebar-item">Metalli</div>
-        <div class="sidebar-item">Pietre</div>
-        <div class="sidebar-item">Orologi</div>
+        <div class="sidebar-item" onclick="filtra('metalli')">Metalli</div>
+        <div class="sidebar-item" onclick="filtra('pietre')">Pietre</div>
+        <div class="sidebar-item" onclick="filtra('orologi')">Orologi</div>
     </nav>
 
     <main class="content">
-        <div class="grid">
-            <div class="card">
+        <div class="grid" id="product-grid">
+            <div class="card metalli">
                 <img src="oro.jpg">
                 <div class="asset-name">GOLD</div>
                 <div class="asset-price">1,000 Units</div>
@@ -60,8 +59,122 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card metalli">
+                <img src="slvr.jpg">
+                <div class="asset-name">SILVP</div>
+                <div class="asset-price">1,000 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card metalli">
+                <img src="oro.jpg">
+                <div class="asset-name">BARP</div>
+                <div class="asset-price">400 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card pietre">
+                <img src="fede (2).jpg">
+                <div class="asset-name">RING</div>
+                <div class="asset-price">300 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card pietre">
                 <img src="diam.jpg">
                 <div class="asset-name">DIAM</div>
                 <div class="asset-price">300 Units</div>
                 <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card pietre">
+                <img src="emer.jpg">
+                <div class="asset-name">EMER</div>
+                <div class="asset-price">200 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card orologi">
+                <img src="rolex.jpg">
+                <div class="asset-name">WATCH</div>
+                <div class="asset-price">200 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card pietre">
+                <img src="perla.jpg">
+                <div class="asset-name">PEARL</div>
+                <div class="asset-price">100 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card metalli">
+                <img src="plat.jpg">
+                <div class="asset-name">PLATT</div>
+                <div class="asset-price">10 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
+            </div>
+
+            <div class="card pietre">
+                <img src="ruby.jpg">
+                <div class="asset-name">RUBY</div>
+                <div class="asset-price">0 Units</div>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal" style="background:#ccc">Esaurito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <span>Termini e Condizioni</span>
+    <span>Tracciabilità Asset</span>
+    <span>Smart Contracts Audit</span>
+    <span>Contatti</span>
+</footer>
+
+<script>
+    function filtra(categoria) {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            if (categoria === 'tutti') {
+                card.style.display = 'block';
+            } else {
+                if (card.classList.contains(categoria)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
