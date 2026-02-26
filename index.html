@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stellar Jewelry Marketplace</title>
     <style>
-        /* Stili Generali - Replicando BLOCKSHOP */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f7f9fc;
             margin: 0;
             padding: 0;
             color: #212529;
         }
-
-        /* Intestazione (Header) */
         header {
             background-color: #ffffff;
             border-bottom: 1px solid #e1e8ed;
@@ -23,173 +20,37 @@
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo {
-            font-weight: bold;
-            font-size: 20px;
-            color: #000;
-            text-transform: uppercase;
+        .logo { font-weight: bold; font-size: 20px; color: #000; text-transform: uppercase; }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links li a { text-decoration: none; color: #6c757d; font-size: 14px; font-weight: 500; }
+        .search-bar { background-color: #f0f2f5; border: 1px solid #e1e8ed; border-radius: 50px; padding: 8px 15px; width: 300px; font-size: 14px; }
+        .profile-actions { display: flex; gap: 10px; align-items: center; }
+        .profile-btn { background-color: transparent; border: 1px solid #e1e8ed; border-radius: 50px; padding: 8px 15px; font-size: 14px; cursor: pointer; }
+        main { padding: 40px 30px; }
+        .page-header { margin-bottom: 30px; }
+        .page-header h1 { font-size: 28px; margin: 0 0 10px 0; }
+        .page-header p { color: #6c757d; margin: 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.3s ease; }
+        .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .image-wrapper { width: 100%; height: 200px; display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        .image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .details { padding: 15px; border-top: 1px solid #e1e8ed; }
+        .collection-name { font-size: 11px; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .token-name { font-size: 16px; font-weight: bold; margin: 0 0 10px 0; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .price-label { font-size: 12px; color: #6c757d; }
+        .price-value { font-size: 14px; font-weight: 600; }
+        
+        /* Nuovi Stili Pagamento */
+        .payment-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+        .buy-stellar { 
+            background-color: #000; color: #fff; border: 1px solid #7d00ff; 
+            border-radius: 6px; padding: 8px; font-size: 12px; font-weight: 600; 
+            cursor: pointer; transition: 0.2s;
         }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            color: #6c757d;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .search-bar {
-            background-color: #f0f2f5;
-            border: 1px solid #e1e8ed;
-            border-radius: 50px;
-            padding: 8px 15px;
-            width: 300px;
-            font-size: 14px;
-        }
-
-        .profile-actions {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .profile-btn {
-            background-color: transparent;
-            border: 1px solid #e1e8ed;
-            border-radius: 50px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        /* Area Principale (Main) */
-        main {
-            padding: 40px 30px;
-        }
-
-        .page-header {
-            margin-bottom: 30px;
-        }
-
-        .page-header h1 {
-            font-size: 28px;
-            margin: 0 0 10px 0;
-        }
-
-        .page-header p {
-            color: #6c757d;
-            margin: 0;
-        }
-
-        /* Griglia dei Prodotti */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        /* Scheda Prodotto (Product Card) */
-        .product-card {
-            background-color: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .image-wrapper {
-            width: 100%;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .image-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .details {
-            padding: 20px;
-            border-top: 1px solid #e1e8ed;
-        }
-
-        .collection-name {
-            font-size: 12px;
-            color: #6c757d;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .token-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0 0 10px 0;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .price-label {
-            font-size: 12px;
-            color: #6c757d;
-        }
-
-        .price-value {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .action-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .buy-now {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            flex: 1;
-        }
-
-        .add-to-cart {
-            background-color: #f0f2f5;
-            color: #000;
-            border: 1px solid #e1e8ed;
-            border-radius: 8px;
-            padding: 10px;
-            cursor: pointer;
-        }
-
+        .buy-stellar:hover { background-color: #7d00ff; }
+        .paypal-container { width: 100%; min-height: 35px; }
     </style>
 </head>
 <body>
@@ -202,183 +63,71 @@
             <li><a href="#">Sell</a></li>
             <li><a href="#">Community</a></li>
         </ul>
-        <input type="text" class="search-bar" placeholder="Search for items, collections...">
+        <input type="text" class="search-bar" placeholder="Search...">
         <div class="profile-actions">
-            <button class="profile-btn">Connect Wallet</button>
+            <button class="profile-btn" onclick="connectWallet()">Connect Wallet</button>
         </div>
     </header>
 
     <main>
         <div class="page-header">
             <h1>Browse Stellar Jewels</h1>
-            <p>Unique digital jewelry assets on the Stellar Network</p>
+            <p>Destinatario: GD22...XSQK</p>
         </div>
+        
         <div class="product-grid">
+            <!-- Esempio per i 10 Token (Ripetuto con i tuoi nomi) -->
+            <script>
+                const tokens = [
+                    { name: 'GOLD', coll: 'Precious Metals', img: 'oro.jpg', avail: '1,000' },
+                    { name: 'SLVR', coll: 'Precious Metals', img: 'slvr.jpg', avail: '1,000' },
+                    { name: 'DIAM', coll: 'Gemstones', img: 'diam.jpg', avail: '100' },
+                    { name: 'EMER', coll: 'Gemstones', img: 'emer.jpg', avail: '200' },
+                    { name: 'SAPP', coll: 'Gemstones', img: 'zaff.jpg', avail: '400' },
+                    { name: 'RUBY', coll: 'Gemstones', img: 'ruby.jpg', avail: '300' },
+                    { name: 'PEARL', coll: 'Organic Gems', img: 'perla.jpg', avail: '100' },
+                    { name: 'PLATT', coll: 'Precious Metals', img: 'plat.jpg', avail: '10' },
+                    { name: 'WATCH', coll: 'Luxury Accessories', img: 'rolex.jpg', avail: '200' },
+                    { name: 'RING', coll: 'Luxury Accessories', img: 'fede (2).jpg', avail: '300' }
+                ];
 
-            <div class="product-card">
-                <div class="image-wrapper"><img src="oro.jpg" alt="GOLD"></div>
-                <div class="details">
-                    <div class="collection-name">Precious Metals</div>
-                    <div class="token-name">GOLD</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">1,000</span>
+                document.write(tokens.map((t, i) => `
+                    <div class="product-card">
+                        <div class="image-wrapper"><img src="${t.img}" alt="${t.name}"></div>
+                        <div class="details">
+                            <div class="collection-name">${t.coll}</div>
+                            <div class="token-name">${t.name}</div>
+                            <div class="price-row">
+                                <span class="price-label">Availability</span>
+                                <span class="price-value">${t.avail}</span>
+                            </div>
+                            <div class="payment-actions">
+                                <button class="buy-stellar" onclick="payWithStellar('${t.name}')">Paga con Stellar Wallet</button>
+                                <div id="paypal-btn-${i}" class="paypal-container"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="slvr.jpg" alt="SLVR"></div>
-                <div class="details">
-                    <div class="collection-name">Precious Metals</div>
-                    <div class="token-name">SLVR</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">1,000</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="diam.jpg" alt="DIAM"></div>
-                <div class="details">
-                    <div class="collection-name">Gemstones</div>
-                    <div class="token-name">DIAM</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">100</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="emer.jpg" alt="EMER"></div>
-                <div class="details">
-                    <div class="collection-name">Gemstones</div>
-                    <div class="token-name">EMER</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">200</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="zaff.jpg" alt="SAPP"></div>
-                <div class="details">
-                    <div class="collection-name">Gemstones</div>
-                    <div class="token-name">SAPP</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">400</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="ruby.jpg" alt="RUBY"></div>
-                <div class="details">
-                    <div class="collection-name">Gemstones</div>
-                    <div class="token-name">RUBY</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">300</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="perla.jpg" alt="PEARL"></div>
-                <div class="details">
-                    <div class="collection-name">Organic Gems</div>
-                    <div class="token-name">PEARL</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">100</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="plat.jpg" alt="PLATT"></div>
-                <div class="details">
-                    <div class="collection-name">Precious Metals</div>
-                    <div class="token-name">PLATT</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">10</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="rolex.jpg" alt="WATCH"></div>
-                <div class="details">
-                    <div class="collection-name">Luxury Accessories</div>
-                    <div class="token-name">WATCH</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">200</span>
-                    </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-wrapper"><img src="fede (2).jpg" alt="RING"></div>
-                <div class="details">
-                    <div class="collection-name">Luxury Accessories</div>
-                    <div class="token-name">RING</div>
-                    <div class="price-row">
-                        <span class="price-label">Availability</span>
-                        <span class="price-value">300</span>
-                    </div>
-                  
-    </script>
-                    </div>
-                </div>
-            </div>
-
+                `).join(''));
+            </script>
         </div>
     </main>
 
+    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+    <script>
+        function payWithStellar(tokenName) {
+            alert("Inviando richiesta di pagamento per " + tokenName + " a:\nGD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK");
+        }
+
+        function connectWallet() {
+            alert("Ricerca Wallet (Freighter/Albedo) in corso...");
+        }
+
+        // Renderizza PayPal per ogni scheda
+        tokens.forEach((t, i) => {
+            paypal.Buttons({
+                style: { height: 35, color: 'blue', shape: 'rect', label: 'pay' }
+            }).render('#paypal-btn-' + i);
+        });
+    </script>
 </body>
 </html>
-
-                
-    
