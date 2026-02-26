@@ -3,107 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curatori1 - Luxury Hair Salon & Assets</title>
+    <title>Curatori1 - Luxury Storefront</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
-        header { text-align: center; padding: 40px; background: #fff; margin-bottom: 20px; border-radius: 8px; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
-        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
-        .card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 15px; }
-        .card h3 { margin: 10px 0; color: #333; }
-        .card p { font-size: 12px; color: #777; }
-        .price { font-weight: bold; font-size: 18px; color: #b8971e; margin: 10px 0; }
-        .buy-btn { background: #b8971e; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        :root { --gold: #b8971e; --dark: #1a1a1a; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: var(--light); }
+        
+        /* Header come da foto */
+        header { background: var(--dark); color: white; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); }
+        .logo-area { display: flex; flex-direction: column; }
+        .connect-btn { background: var(--gold); border: none; padding: 8px 15px; color: white; border-radius: 20px; cursor: pointer; font-weight: bold; }
+
+        /* Layout principale: Sidebar + Contenuto */
+        .main-container { display: flex; flex: 1; overflow: hidden; }
+
+        /* Sidebar sinistra (Voci richieste) */
+        nav.sidebar { width: 220px; background: white; padding: 20px; border-right: 1px solid #ddd; display: flex; flex-direction: column; gap: 15px; }
+        .sidebar h4 { font-size: 14px; color: #888; text-transform: uppercase; margin-bottom: 5px; }
+        .sidebar a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 15px; }
+        .sidebar a:hover { color: var(--gold); }
+
+        /* Griglia Prodotti */
+        .content { flex: 1; padding: 30px; overflow-y: auto; background: #ececec; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 15px; border-radius: 5px; text-align: center; position: relative; border: 1px solid #eee; }
+        .card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 10px; }
+        .card h3 { font-size: 16px; margin: 5px 0; }
+        .price-tag { color: var(--gold); font-weight: bold; margin: 10px 0; border-top: 1px solid #eee; padding-top: 10px; }
+        .verified { font-size: 10px; color: green; display: block; margin-bottom: 5px; }
+
+        /* Footer (Voci in basso richieste) */
+        footer { background: white; padding: 10px 40px; display: flex; justify-content: center; gap: 30px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+        footer span { cursor: pointer; }
+        footer span:hover { color: var(--gold); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Curatori1 Hair Salon</h1>
-    <p>Luxury Assets on Stellar Blockchain - Powered by Soroban</p>
+    <div class="logo-area">
+        <span style="font-weight: bold; letter-spacing: 2px;">CURATORI1</span>
+        <span style="font-size: 10px; color: var(--gold);">Luxury Assets on Stellar</span>
+    </div>
+    <div style="text-align: center;">
+        <h2 style="margin: 0; font-size: 18px;">Curatori1 Storefront</h2>
+        <span style="font-size: 11px;">Powered by Soroban Smart Contracts</span>
+    </div>
+    <button class="connect-btn">Connect Wallet</button>
 </header>
 
-<div class="grid-container">
-    <div class="card">
-        <img src="oro.jpg" alt="GOLD">
-        <h3>GOLD</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">1,000 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
+<div class="main-container">
+    <nav class="sidebar">
+        <h4>Store</h4>
+        <a href="#">Tutti i Prodotti</a>
+        <a href="#">In Vendita</a>
+        <a href="#">In Vetrina</a>
+        <hr width="100%">
+        <h4>Categorie</h4>
+        <a href="#">Metalli Preziosi</a>
+        <a href="#">Orologi</a>
+        <a href="#">Pietre</a>
+        <a href="#">Servizi Salon</a>
+    </nav>
 
-    <div class="card">
-        <img src="slvr.jpg" alt="SILVP">
-        <h3>SILVP</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">1,000 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
+    <main class="content">
+        <div class="grid">
+            <div class="card">
+                <span class="verified">✓ VERIFIED STELLAR</span>
+                <img src="oro.jpg" alt="GOLD">
+                <h3>GOLD</h3>
+                <div class="price-tag">1,000 Units</div>
+                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+            </div>
 
-    <div class="card">
-        <img src="oro.jpg" alt="BARP">
-        <h3>BARP</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">400 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
+            <div class="card">
+                <span class="verified">✓ VERIFIED STELLAR</span>
+                <img src="diam.jpg" alt="DIAM">
+                <h3>DIAM</h3>
+                <div class="price-tag">300 Units</div>
+                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+            </div>
 
-    <div class="card">
-        <img src="fede (2).jpg" alt="RING">
-        <h3>RING</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">300 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
+            <div class="card">
+                <span class="verified">✓ VERIFIED STELLAR</span>
+                <img src="rolex.jpg" alt="WATCH">
+                <h3>WATCH</h3>
+                <div class="price-tag">200 Units</div>
+                <button class="connect-btn" style="width: 100%; border-radius: 5px;">Dettagli</button>
+            </div>
 
-    <div class="card">
-        <img src="diam.jpg" alt="DIAM">
-        <h3>DIAM</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">300 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
-
-    <div class="card">
-        <img src="emer.jpg" alt="EMER">
-        <h3>EMER</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">200 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
-
-    <div class="card">
-        <img src="rolex.jpg" alt="WATCH">
-        <h3>WATCH</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">200 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
-
-    <div class="card">
-        <img src="perla.jpg" alt="PEARL">
-        <h3>PEARL</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">100 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
-
-    <div class="card">
-        <img src="plat.jpg" alt="PLATT">
-        <h3>PLATT</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">10 Units</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
-
-    <div class="card">
-        <img src="ruby.jpg" alt="RUBY">
-        <h3>RUBY</h3>
-        <p>Issuer: GD22...XSQK</p>
-        <div class="price">Disponibilità: 0</div>
-        <button class="buy-btn">Acquista</button>
-    </div>
+            <div class="card">
+                <span class="verified">✓ VERIFIED STELLAR</span>
+                <img src="ruby.jpg" alt="RUBY">
+                <h3>RUBY</h3>
+                <div class="price-tag">Disponibilità: 0</div>
+                <button class="connect-btn" style="width: 100%; border-radius: 5px; background: #ccc;">Esaurito</button>
+            </div>
+        </div>
+    </main>
 </div>
+
+<footer>
+    <span>Termini e Condizioni Blockchain</span>
+    <span>Tracciabilità Asset</span>
+    <span>Smart Contracts Audit</span>
+    <span>Contatti Curatori1</span>
+</footer>
 
 </body>
 </html>
+ 
