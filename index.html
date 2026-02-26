@@ -369,9 +369,18 @@
                         <span class="price-label">Availability</span>
                         <span class="price-value">300</span>
                     </div>
-                    <div class="action-row">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">+</button>
+                   <div class="payment-box">
+        <button id="btn-stellar-wallet" onclick="payWithWallet()">Paga con Wallet Stellar</button>
+        <div id="paypal-button-container"></div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+    <script>
+        function payWithWallet() {
+            console.log("Invio a GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK");
+        }
+        paypal.Buttons().render('#paypal-button-container');
+    </script>
                     </div>
                 </div>
             </div>
