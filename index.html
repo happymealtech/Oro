@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storefront</title>
+    <title>Storefront Assets - Curatori1</title>
     <style>
         body { font-family: sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background: #f0f0f0; }
-        
-        /* Header */
-        header { background: #1a1a1a; color: #b8971e; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .connect-wallet { background: #b8971e; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
-
+        header { background: #1a1a1a; color: #b8971e; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #b8971e; }
+        .connect-wallet { background: #b8971e; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
         .main-layout { display: flex; flex: 1; overflow: hidden; }
-
-        /* Sidebar sinistra (Voci come da foto) */
-        .sidebar { width: 200px; background: white; padding: 20px; border-right: 1px solid #ddd; }
-        .sidebar-item { margin-bottom: 15px; font-size: 14px; color: #333; cursor: pointer; }
+        .sidebar { width: 220px; background: white; padding: 20px; border-right: 1px solid #ddd; }
         .sidebar-title { font-weight: bold; text-transform: uppercase; color: #888; margin-bottom: 10px; font-size: 12px; }
-
-        /* Griglia Centrale */
-        .content { flex: 1; padding: 20px; overflow-y: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
-        .card { background: white; padding: 15px; border-radius: 4px; text-align: center; border: 1px solid #ddd; }
-        .card img { width: 100%; height: 120px; object-fit: contain; }
-        .asset-name { font-weight: bold; margin: 10px 0; }
-        .asset-price { color: #b8971e; font-weight: bold; margin-bottom: 10px; }
-        .buy-btn { background: #b8971e; color: white; border: none; width: 100%; padding: 8px; cursor: pointer; }
-
-        /* Footer basso (Voci come da foto) */
-        footer { background: white; padding: 15px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #ddd; font-size: 12px; }
+        .sidebar-item { margin-bottom: 15px; font-size: 14px; color: #333; cursor: pointer; }
+        .content { flex: 1; padding: 20px; overflow-y: auto; background: #e5e5e5; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 15px; border-radius: 4px; text-align: center; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 140px; object-fit: contain; margin-bottom: 10px; }
+        .asset-name { font-weight: bold; font-size: 16px; margin: 5px 0; }
+        .asset-price { color: #b8971e; font-weight: bold; margin-bottom: 10px; font-size: 18px; }
+        
+        /* Stile pulsanti */
+        .btn-group { display: flex; flex-direction: column; gap: 8px; }
+        .buy-stellar { background: #b8971e; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 12px; }
+        .buy-paypal { background: #0070ba; color: white; border: none; padding: 10px; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 12px; }
+        
+        footer { background: white; padding: 15px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
     </style>
 </head>
 <body>
 
 <header>
-    <div></div>
-    <div style="text-align: center;"><strong>STOREFRONT ASSETS</strong></div>
+    <div style="font-weight: bold; letter-spacing: 1px;">STOREFRONT</div>
+    <div style="text-align: center;"><strong>PRODOTTI BLOCKCHAIN & TRADIZIONALI</strong></div>
     <button class="connect-wallet">Connect Wallet</button>
 </header>
 
@@ -58,72 +54,14 @@
                 <img src="oro.jpg">
                 <div class="asset-name">GOLD</div>
                 <div class="asset-price">1,000 Units</div>
-                <button class="buy-btn">Acquista</button>
+                <div class="btn-group">
+                    <button class="buy-stellar">ACQUISTA CON STELLAR</button>
+                    <button class="buy-paypal">ACQUISTA CON PAYPAL</button>
+                </div>
             </div>
-            <div class="card">
-                <img src="slvr.jpg">
-                <div class="asset-name">SILVP</div>
-                <div class="asset-price">1,000 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="oro.jpg">
-                <div class="asset-name">BARP</div>
-                <div class="asset-price">400 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="fede (2).jpg">
-                <div class="asset-name">RING</div>
-                <div class="asset-price">300 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
+
             <div class="card">
                 <img src="diam.jpg">
                 <div class="asset-name">DIAM</div>
                 <div class="asset-price">300 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="emer.jpg">
-                <div class="asset-name">EMER</div>
-                <div class="asset-price">200 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="rolex.jpg">
-                <div class="asset-name">WATCH</div>
-                <div class="asset-price">200 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="perla.jpg">
-                <div class="asset-name">PEARL</div>
-                <div class="asset-price">100 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="plat.jpg">
-                <div class="asset-name">PLATT</div>
-                <div class="asset-price">10 Units</div>
-                <button class="buy-btn">Acquista</button>
-            </div>
-            <div class="card">
-                <img src="ruby.jpg">
-                <div class="asset-name">RUBY</div>
-                <div class="asset-price">0 Units</div>
-                <button class="buy-btn" style="background:#ccc">Esaurito</button>
-            </div>
-        </div>
-    </main>
-</div>
-
-<footer>
-    <span>Termini e Condizioni</span>
-    <span>Tracciabilità Asset</span>
-    <span>Smart Contracts Audit</span>
-    <span>Contatti</span>
-</footer>
-
-</body>
-</html>
+                <div class="btn-group">
