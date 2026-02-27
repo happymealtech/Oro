@@ -1,17 +1,24 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: sans-serif; background: #f9f9f9; }
+body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; }
 
-header { background: #000; color: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: bold; font-size: 20px; }
+/* Header */
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #ddd; }
+.logo { font-weight: bold; font-size: 22px; letter-spacing: 2px; }
+.header-left, .header-right { display: flex; gap: 15px; }
+button { background: none; border: none; cursor: pointer; font-size: 18px; }
 
-.hamburger { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
-.btn-connect { background: #fff; color: #000; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+/* Main */
+h1 { text-align: center; margin-top: 20px; }
+.subtitle { text-align: center; color: #666; }
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+.card { border: 1px solid #eee; padding: 10px; text-align: center; }
+.card img { width: 100%; height: auto; }
 
-.menu-overlay { display: none; position: fixed; top:0; left:0; width: 100%; height: 100%; background: #fff; flex-direction: column; align-items: center; justify-content: center; z-index: 1000; }
-.menu-overlay.active { display: flex; }
-.close-btn { position: absolute; top: 20px; right: 20px; font-size: 30px; border: none; background: none; cursor: pointer; }
+/* Sticky Button */
+.sticky-filter { 
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); 
+    background: #000; color: #fff; padding: 15px 30px; border-radius: 50px; font-weight: bold;
+}
 
-.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-.card { background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; text-align: center; }
-.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
-.btn-crypto { background: #000; color: #fff; border: none; padding: 10px; width: 100%; margin-top: 10px; cursor: pointer; }
+/* Footer */
+footer { padding: 20px; background: #1a1a1a; color: #fff; margin-top: 50px; }
+input { width: 100%; padding: 10px; margin-top: 10px; }
