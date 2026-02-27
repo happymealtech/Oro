@@ -5,38 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stellar Jewelry Marketplace</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f7f9fc; margin: 0; padding: 0; color: #212529; display: flex; }
-        
-        /* Layout Principale con Sidebar */
-        .main-content { flex: 1; padding: 40px 30px; }
-        .sidebar { width: 350px; background: white; border-left: 1px solid #e1e8ed; height: 100vh; position: sticky; top: 0; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; }
-        
-        header { background-color: #ffffff; border-bottom: 1px solid #e1e8ed; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; width: 100%; position: fixed; top: 0; z-index: 100; box-sizing: border-box; }
-        .logo { font-weight: bold; font-size: 20px; color: #000; text-transform: uppercase; }
-        
-        main { margin-top: 80px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-        .product-card { background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 12px; overflow: hidden; transition: 0.3s; }
-        .image-wrapper { height: 150px; display: flex; justify-content: center; align-items: center; padding: 10px; }
-        .image-wrapper img { max-width: 100%; max-height: 100%; }
-        .details { padding: 15px; border-top: 1px solid #e1e8ed; }
-        
-        .add-to-cart-btn { width: 100%; background-color: #000; color: #fff; border: none; border-radius: 6px; padding: 10px; font-weight: 600; cursor: pointer; margin-top: 10px; }
-        .add-to-cart-btn:hover { background-color: #333; }
-
-        /* Stili Carrello */
-        .cart-title { font-size: 20px; font-weight: bold; border-bottom: 2px solid #f7f9fc; padding-bottom: 10px; margin-bottom: 20px; }
-        .cart-items { flex: 1; overflow-y: auto; }
-        .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; padding: 5px; border-bottom: 1px solid #eee; }
-        .cart-footer { border-top: 2px solid #eee; padding-top: 20px; }
-        .total-box { font-size: 18px; font-weight: bold; margin-bottom: 20px; display: flex; justify-content: space-between; }
-        
-        .buy-stellar { background-color: #7d00ff; color: white; border: none; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
-        #paypal-button-container { width: 100%; }
+        body { font-family: sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 10px; }
+        button { flex: 1; padding: 10px; cursor: pointer; border: none; border-radius: 4px; }
+        .btn-buy { background-color: #28a745; color: white; }
+        .btn-info { background-color: #007bff; color: white; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">GEMSHOP</div>
-        <div class="profile-actions"><button style="padding: 8px 15px; border-radius: 50px; border: 1px solid #ddd; cursor: pointer;">Connect Wallet</
+    <h1>Il Nostro Catalogo</h1>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="plat.jpg" alt="PLATT">
+            <h3>PLATT</h3>
+            <div class="btn-group">
+                <button class="btn-buy">Compra</button>
+                <button class="btn-info">Info</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="perla.jpg" alt="PEARL">
+            <h3>PEARL</h3>
+            <div class="btn-group">
+                <button class="btn-buy">Compra</button>
+                <button class="btn-info">Info</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="rolex.jpg" alt="WATCH">
+            <h3>WATCH</h3>
+            <div class="btn-group">
+                <button class="btn-buy">Compra</button>
+                <button class="btn-info">Info</b
