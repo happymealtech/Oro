@@ -3,88 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supporto & Contatti - Curatori d'Immagine</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        
-        /* Header Professionale */
-        header { background: #ffffff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-size: 22px; font-weight: 800; letter-spacing: 1px; color: #000; }
-        .nav-links a { text-decoration: none; color: #666; font-weight: 600; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover { color: #000; }
-
-        /* Contenitore Principale */
-        .wrapper { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        .contact-card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        
-        h1 { font-size: 28px; margin-bottom: 20px; font-weight: 700; color: #111; }
-        p { color: #666; margin-bottom: 10px; }
-
-        /* Info Block */
-        .info-section h2 { font-size: 18px; margin-bottom: 15px; color: #000; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-item { margin-bottom: 20px; }
-        .label { font-weight: bold; display: block; color: #888; font-size: 12px; text-transform: uppercase; }
-        .value { font-size: 16px; color: #111; }
-
-        /* Blockchain Box */
-        .blockchain-card { grid-column: span 2; background: #fafafa; border: 1px solid #eee; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        .blockchain-card code { display: block; background: #eee; padding: 10px; border-radius: 4px; font-size: 12px; margin-top: 10px; word-break: break-all; color: #444; }
-
-        /* Button */
-        .btn-home { display: inline-block; padding: 12px 30px; background: #000; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 600; margin-top: 30px; transition: 0.3s; }
-        .btn-home:hover { background: #333; transform: translateY(-2px); }
-
-        @media (max-width: 768px) { .contact-card { grid-template-columns: 1fr; } .blockchain-card { grid-column: span 1; } }
-    </style>
+    <title>Contatti - Curatori d'Immagine</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">CURATORI D'IMMAGINE</div>
+        <div class="logo">BLOCKSHOP</div>
         <nav class="nav-links">
-            <a href="index.html">← TORNA ALLO SHOP</a>
+            <a href="index.html">Torna allo Shop</a>
         </nav>
     </header>
 
-    <div class="wrapper">
-        <div class="contact-card">
-            <div class="info-section">
-                <h1>Supporto Clienti</h1>
-                <p>Siamo a tua disposizione per informazioni sui prodotti e sulle transazioni Stellar.</p>
-                
-                <div class="contact-item">
-                    <span class="label">Proprietario</span>
-                    <span class="value">Curatori1</span>
-                </div>
-                <div class="contact-item">
-                    <span class="label">Settore</span>
-                    <span class="value">Hair & Beauty Marketplace</span>
-                </div>
-            </div>
+    <main style="padding: 50px 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Contatti</h1>
+        <p>Siamo a disposizione per assistenza sui prodotti e transazioni Stellar.</p>
+        
+        <div style="margin-top: 30px; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h3>Dati Aziendali</h3>
+            <p><strong>Proprietario:</strong> Curatori1</p>
+            <p><strong>Indirizzo Emittente (Stellar):</strong> <code>GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK</code></p>
+        </div>
+    </main>
 
-            <div class="info-section">
-                <h2>Digital Identity</h2>
-                <div class="contact-item">
-                    <span class="label">Rete</span>
-                    <span class="value">Stellar Public Network</span>
-                </div>
-                <div class="contact-item">
-                    <span class="label">Status</span>
-                    <span class="value" style="color: #27ae60;">● Verificato</span>
-                </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Curatori d'Immagine</h4>
+                <p>La nostra filosofia mette al centro la cura e la salute dei capelli e della barba.</p>
             </div>
-
-            <div class="blockchain-card">
-                <span class="label">Indirizzo Emittente (Issuer Address)</span>
-                <code>GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK</code>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="contatti.html">Contatti e Supporto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="La tua email..." required>
+                    <button type="submit" class="newsletter-submit">&#10148;</button>
+                </form>
             </div>
         </div>
+    </footer>
 
-        <div style="text-align: center;">
-            <a href="index.html" class="btn-home">VISITA IL MARKETPLACE</a>
-        </div>
-    </div>
+    <a href="https://wa.me/IL_TUO_NUMERO_QUI" class="whatsapp-float" target="_blank">&#128172;</a>
 
 </body>
 </html>
