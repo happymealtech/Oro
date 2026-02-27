@@ -4,48 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curatori d'Immagine</title>
-    <style>
-        /* Base e Header Nero */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: sans-serif; }
-        header { background: #000; color: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: relative; }
-        .logo { font-size: 20px; font-weight: bold; }
-        
-        /* Menu e Contenitori */
-        .right-section { display: flex; align-items: center; gap: 15px; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { color: #fff; text-decoration: none; font-weight: bold; }
-        
-        /* Hamburger e Mobile */
-        .hamburger { display: none; font-size: 24px; background: none; border: none; color: #fff; cursor: pointer; }
-        .btn-connect { background: #fff; color: #000; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-
-        /* Media Query per Mobile */
-        @media (max-width: 768px) {
-            .hamburger { display: block; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; right: 0; background: #333; padding: 20px; width: 200px; z-index: 10; }
-            .nav-links.active { display: flex; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">BLOCKSHOP</div>
-        <div class="right-section">
-            <nav class="nav-links" id="menu">
-                <a href="#productGrid">Categorie</a>
-                <a href="#productGrid">Market</a>
-                <a href="contatti.html">Contatti</a>
-            </nav>
+        
+        <nav class="nav-links" id="main-menu">
+            <a href="#productGrid">Market</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+
+        <div class="header-actions">
             <button class="hamburger" onclick="toggleMenu()">☰</button>
             <button class="btn-connect">Connect Wallet</button>
         </div>
     </header>
 
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <a href="#productGrid">Market</a>
+        <a href="contatti.html">Contatti</a>
+    </div>
+
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('menu');
+            const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('active');
         }
     </script>
