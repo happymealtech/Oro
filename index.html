@@ -2,84 +2,103 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Curatori d'Immagine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curatori d'Immagine - Marketplace</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* Header Pulito */
+        /* Header */
         header { background: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
         .logo { font-size: 20px; font-weight: bold; }
-        .header-right { display: flex; align-items: center; gap: 20px; }
-        .search-bar { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        .nav-links { display: flex; gap: 20px; font-weight: bold; color: #555; }
+        .nav-links a { text-decoration: none; color: #555; }
+        .nav-links a:hover { color: #000; }
+        .search-bar { width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        .header-icons { display: flex; gap: 15px; align-items: center; }
+        .btn-connect { background-color: black; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
         
-        /* Menu Hamburger */
-        .dropdown { position: relative; }
-        summary { cursor: pointer; font-size: 24px; list-style: none; }
-        .dropdown-content { position: absolute; right: 0; top: 40px; background: white; border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 150px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .dropdown-content a { display: block; padding: 8px 0; text-decoration: none; color: #555; font-weight: bold; }
+        /* Hero */
+        .hero-section { display: flex; gap: 10px; margin-bottom: 30px; }
+        .hero-section img { width: 33.3%; height: 200px; object-fit: cover; border-radius: 8px; }
         
-        /* Sidebar e Main come prima */
+        /* Layout */
         .content-wrapper { display: flex; padding: 20px; gap: 20px; }
+        
+        /* Sidebar */
         aside { width: 250px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; height: fit-content; }
-        .filter-section { margin-bottom: 25px; }
-        .filter-section h4 { margin-bottom: 10px; font-size: 14px; }
-        .filter-section a { display: block; font-size: 13px; margin-bottom: 5px; color: #666; text-decoration: none; }
+        summary { cursor: pointer; font-weight: bold; margin-bottom: 10px; list-style: none; }
+        .filter-content { margin-bottom: 20px; padding-left: 10px; }
+        .filter-content a { display: block; font-size: 13px; margin-bottom: 5px; color: #666; text-decoration: none; }
+        
+        /* Main */
         .main-content { flex-grow: 1; }
+        .top-row h2 { text-align: center; margin-bottom: 20px; }
+        
+        /* Grid */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
         .card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
         .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 10px; }
-        .btn { padding: 8px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 11px; font-weight: bold; margin-top: 5px; }
+        .btn { padding: 8px; border: none; border-radius: 4px; cursor: pointer; margin-top: 5px; width: 100%; font-size: 11px; font-weight: bold; }
         .btn-crypto { background: black; color: white; }
-        .btn-trad { background: #f8f9fa; color: #333; border: 1px solid #ccc; }
+        .btn-trad { background: #f8f9fa; color: #333; border: 1px solid #ccc; margin-top: 5px; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">BLOCKSHOP</div>
-        <div class="header-right">
-            <input type="text" id="search" class="search-bar" placeholder="Cerca prodotto..." onkeyup="filterProducts()">
-            <details class="dropdown">
-                <summary>☰</summary>
-                <div class="dropdown-content">
-                    <a href="#productGrid">Categorie</a>
-                    <a href="#productGrid">Market</a>
-                    <a href="contatti.html">Contatti</a>
-                </div>
-            </details>
+        <nav class="nav-links">
+            <a href="#productGrid">Categorie</a>
+            <a href="#productGrid">Market</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+        <input type="text" id="search" class="search-bar" placeholder="Cerca prodotto..." onkeyup="filterProducts()">
+        <div class="header-icons">
+            <span>&#128722;</span>
+            <span>&#128276;</span>
+            <button class="btn-connect">Connect Wallet</button>
         </div>
     </header>
 
     <div class="content-wrapper">
         <aside>
-            <div class="filter-section">
-                <h4>Prodotti ▾</h4>
-                <a href="#PLATT">Shampo</a>
-                <a href="#PEARL">Lozioni per capelli</a>
-                <a href="#WATCH">Maschere x capelli</a>
-                <a href="#RING">Spray x capelli</a>
-                <a href="#SLVR">Trattamenti per capelli</a>
-                <a href="#DIAM">Creme x capelli</a>
-                <a href="#EMER">Oli per capelli</a>
-                <a href="#RUBY">Solari</a>
-                <a href="#SAPP">Viso e Corpo</a>
-                <a href="#GOLD">Kit e idee regalo</a>
-            </div>
-            <div class="filter-section">
-                <h4>Price Range</h4>
-                <input type="range" min="0" max="1000" style="width: 100%;">
-            </div>
+            <details open>
+                <summary>Prodotti ☰</summary>
+                <div class="filter-content">
+                    <a href="#PLATT">Shampo</a>
+                    <a href="#PEARL">Lozioni per capelli</a>
+                    <a href="#WATCH">Maschere x capelli</a>
+                    <a href="#RING">Spray x capelli</a>
+                    <a href="#SLVR">Trattamenti per capelli</a>
+                    <a href="#DIAM">Creme x capelli</a>
+                    <a href="#EMER">Oli per capelli</a>
+                    <a href="#RUBY">Solari</a>
+                    <a href="#SAPP">Viso e Corpo</a>
+                    <a href="#GOLD">Kit e idee regalo</a>
+                </div>
+            </details>
+            <details>
+                <summary>Price Range ☰</summary>
+                <div class="filter-content">
+                    <input type="range" min="0" max="1000" style="width: 100%;">
+                </div>
+            </details>
         </aside>
 
         <main class="main-content">
+            <section class="hero-section">
+                <img src="plat.jpg" alt="Banner1">
+                <img src="perla.jpg" alt="Banner2">
+                <img src="rolex.jpg" alt="Banner3">
+            </section>
+
+            <div class="top-row">
+                <h2>Curatori d'Immagine</h2>
+            </div>
+            
             <div class="grid-container" id="productGrid">
                 <div class="card" id="PLATT" data-name="PLATT"><img src="plat.jpg" alt="PLATT"><h3>PLATT</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
                 <div class="card" id="PEARL" data-name="PEARL"><img src="perla.jpg" alt="PEARL"><h3>PEARL</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
                 <div class="card" id="WATCH" data-name="WATCH"><img src="rolex.jpg" alt="WATCH"><h3>WATCH</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
-                <div class="card" id="RING" data-name="RING"><img src="fede (2).jpg" alt="RING"><h3>RING</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
-                <div class="card" id="SLVR" data-name="SLVR"><img src="slvr.jpg" alt="SLVR"><h3>SLVR</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
-                <div class="card" id="DIAM" data-name="DIAM"><img src="diam.jpg" alt="DIAM"><h3>DIAM</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
-                <div class="card" id="EMER" data-name="EMER"><img src="emer.jpg" alt="EMER"><h3>EMER</h3><button class="btn btn-crypto">BUY NOW</button><button class="btn btn-trad">Tradizionale</button></div>
-                <div class="card" id="RUBY" data-name="RUBY"><img src="ruby.jpg" alt="RUBY"><h3>RUBY</h3><button
-         
+                <div class="card" id="RING" data-name="RING"><img src="fede (2).jpg" alt="
