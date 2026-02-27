@@ -8,24 +8,19 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* Header identico a index */
+        /* Header identico all'Index */
         header { background: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
         .logo { font-size: 20px; font-weight: bold; }
-        .nav-links { display: flex; gap: 20px; font-weight: bold; color: #555; }
+        .nav-links { display: flex; gap: 20px; font-weight: bold; }
         .nav-links a { text-decoration: none; color: #555; }
-        .nav-links a:hover { color: #000; }
         
-        .content-wrapper { display: flex; padding: 20px; gap: 20px; }
+        /* Sezione Contatti */
+        .contact-container { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
+        h1 { margin-bottom: 20px; color: #333; }
+        .info { margin-bottom: 15px; font-size: 16px; color: #666; }
+        .blockchain-info { margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 4px; font-size: 12px; word-break: break-all; }
         
-        /* Sidebar */
-        aside { width: 250px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; height: fit-content; }
-        
-        /* Main Content */
-        .main-content { flex-grow: 1; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        .btn-submit { background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background: black; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -33,40 +28,26 @@
     <header>
         <div class="logo">BLOCKSHOP</div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="contatti.html">Contatti</a>
+            <a href="index.html">Torna allo Shop</a>
         </nav>
     </header>
 
-    <div class="content-wrapper">
-        <aside>
-            <h3>Informazioni</h3>
-            <p style="margin-top: 15px; font-size: 14px;">
-                Email: Francescoiovinella90@libero.it<br>
-                Tel: +39 334 8820632<br>
-                Sede: Via 1 Mggio, 70 Giugliano in Campania
-            </p>
-        </aside>
+    <div class="contact-container">
+        <h1>Contatti</h1>
+        <div class="info">
+            <p><strong>Username:</strong> Curatori1</p>
+            <p><strong>Settore:</strong> Hair Salon & Marketplace</p>
+            <p><strong>Piattaforma:</strong> Stellar Blockchain</p>
+        </div>
 
-        <main class="main-content">
-            <h2>Contattaci</h2>
-            <form style="margin-top: 20px;">
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" placeholder="Il tuo nome">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="La tua email">
-                </div>
-                <div class="form-group">
-                    <label>Messaggio</label>
-                    <textarea rows="5" placeholder="Scrivi qui..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Invia Messaggio</button>
-            </form>
-        </main>
+        <div class="blockchain-info">
+            <strong>Issuer Address (Stellar):</strong><br>
+            GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK
+        </div>
+
+        <a href="index.html" class="btn-back">Torna alla Home</a>
     </div>
 
 </body>
 </html>
+         
