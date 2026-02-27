@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curatori d'Immagine</title>
+    <title>Curatori d'Immagine | Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">BLOCKSHOP</div>
-        <nav class="nav-links">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-            <button class="btn-connect">Connect Wallet</button>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="btn-wallet">Connect Wallet</button>
         </nav>
     </header>
 
-    <div id="mobile-menu" class="menu-overlay">
-        <button class="close-btn" onclick="toggleMenu()">×</button>
-        <a href="#productGrid">Market</a>
-        <a href="contatti.html">Contatti</a>
-    </div>
+    <section class="hero">
+        <h1>Stile e Qualità su Blockchain</h1>
+        <p>Scopri i nostri prodotti esclusivi garantiti da Stellar.</p>
+    </section>
 
-    <main class="main-content">
-        <div class="grid-container" id="productGrid">
+    <main class="container">
+        <div class="grid">
             <div class="card">
-                <img src="shampo.jpg" alt="Shampo">
-                <h3>Shampo</h3>
-                <button class="btn-crypto">BUY NOW</button>
+                <img src="https://via.placeholder.com/300x200" alt="Prodotto">
+                <h3>Shampo Professionale</h3>
+                <p class="price">10.00 XLM</p>
+                <button class="btn-buy">Acquista</button>
             </div>
             <div class="card">
-                <img src="lozioni.jpg" alt="Lozioni">
-                <h3>Lozioni</h3>
-                <button class="btn-crypto">BUY NOW</button>
+                <img src="https://via.placeholder.com/300x200" alt="Prodotto">
+                <h3>Lozione Bio</h3>
+                <p class="price">15.00 XLM</p>
+                <button class="btn-buy">Acquista</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Prodotto">
+                <h3>Kit Completo</h3>
+                <p class="price">25.00 XLM</p>
+                <button class="btn-buy">Acquista</button>
             </div>
         </div>
     </main>
 
     <script>
         function toggleMenu() {
-            document.getElementById('mobile-menu').classList.toggle('active');
+            alert('Menu aperto');
         }
     </script>
 </body>
