@@ -42,7 +42,137 @@
         .btn { padding: 8px; border: none; border-radius: 4px; cursor: pointer; margin-top: 5px; width: 100%; font-size: 11px; font-weight: bold; }
         .btn-crypto { background: black; color: white; }
         .btn-trad { background: #f8f9fa; color: #333; border: 1px solid #ccc; margin-top: 5px; }
+        /* --- NUOVO FOOTER STYLE --- */
+footer {
+    background-color: #333; /* Grigio scuro per contrasto */
+    color: #fff;
+    padding: 60px 0 30px 0;
+    margin-top: auto; /* Spinge il footer in fondo se la pagina è corta */
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: #bbb;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+/* Style Newsletter Input */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-input::placeholder {
+    color: #888;
+}
+
+.newsletter-submit {
+    background-color: #555; /* Grigio scuro per il bottone */
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-submit:hover {
+    background-color: #777;
+}
+
+/* --- WHATSAPP FLOATING BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px #777;
+}
+
+/* Adattamento per dispositivi mobili */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        justify-content: center;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
     </style>
+
 </head>
 <body>
 
