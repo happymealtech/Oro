@@ -13,10 +13,14 @@
         .logo { font-size: 20px; font-weight: bold; }
         .nav-links { display: flex; gap: 20px; font-weight: bold; color: #555; }
         .nav-links a { text-decoration: none; color: #555; }
-        .nav-links a:hover { color: #000; }
         .search-bar { width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
         .header-icons { display: flex; gap: 15px; align-items: center; }
         .btn-connect { background-color: black; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        
+        /* Banner Hero */
+        .hero-section { display: flex; gap: 10px; margin-bottom: 30px; }
+        .hero-section img { width: 33.3%; height: 200px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .hero-section img:hover { opacity: 0.8; }
         
         /* Main Layout */
         .content-wrapper { display: flex; padding: 20px; gap: 20px; }
@@ -26,16 +30,15 @@
         .filter-section { margin-bottom: 25px; }
         .filter-section h4 { margin-bottom: 10px; font-size: 14px; }
         .filter-section a { display: block; font-size: 13px; margin-bottom: 5px; color: #666; text-decoration: none; }
-        .filter-section a:hover { color: #007bff; }
+        .filter-section a:hover { color: #007bff; text-decoration: underline; }
         
         /* Main content */
         .main-content { flex-grow: 1; }
         .top-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .filter-trigger { font-weight: bold; cursor: pointer; }
         
         /* Grid */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
+        .card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; scroll-margin-top: 20px; }
         .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 10px; transition: transform 0.3s ease; }
         .card img:hover { transform: scale(1.05); cursor: pointer; }
         
@@ -50,10 +53,10 @@
     <header>
         <div class="logo">BLOCKSHOP</div>
         <nav class="nav-links">
-            <a href="#">Categorie</a>
-            <a href="#">Market</a>
-            <a href="#">Prodotti</a>
-            <a href="#">Contatti</a>
+            <a href="#productGrid">Categorie</a>
+            <a href="#productGrid">Market</a>
+            <a href="#productGrid">Prodotti</a>
+            <a href="#productGrid">Contatti</a>
         </nav>
         <input type="text" id="search" class="search-bar" placeholder="Cerca prodotto..." onkeyup="filterProducts()">
         <div class="header-icons">
@@ -67,49 +70,47 @@
         <aside>
             <div class="filter-section">
                 <h4>Prodotti ▾</h4>
-                <a href="#">Shampo</a>
-                <a href="#">Lozioni per capelli</a>
-                <a href="#">Maschere x capelli</a>
-                <a href="#">Spray x capelli</a>
-                <a href="#">Trattamenti per capelli</a>
-                <a href="#">Creme x capelli</a>
-                <a href="#">Oli per capelli</a>
-                <a href="#">Solari</a>
-                <a href="#">Viso e Corpo</a>
-                <a href="#">Kit e idee regalo</a>
+                <a href="#PLATT">Shampo</a>
+                <a href="#PEARL">Lozioni per capelli</a>
+                <a href="#WATCH">Maschere x capelli</a>
+                <a href="#RING">Spray x capelli</a>
+                <a href="#SLVR">Trattamenti per capelli</a>
+                <a href="#DIAM">Creme x capelli</a>
+                <a href="#EMER">Oli per capelli</a>
+                <a href="#RUBY">Solari</a>
+                <a href="#SAPP">Viso e Corpo</a>
+                <a href="#GOLD">Kit e idee regalo</a>
             </div>
             <div class="filter-section">
                 <h4>Network</h4>
-                <a href="#"><input type="checkbox"> Stellar</a>
-                <a href="#"><input type="checkbox"> Ethereum</a>
-            </div>
-            <div class="filter-section">
-                <h4>Price Range</h4>
-                <input type="range" style="width: 100%;">
-            </div>
-            <div class="filter-section">
-                <h4>Status</h4>
-                <a href="#"><input type="checkbox"> For Sale</a>
+                <a href="#">Stellar</a>
+                <a href="#">Ethereum</a>
             </div>
         </aside>
 
         <main class="main-content">
+            <section class="hero-section">
+                <img src="plat.jpg" alt="Banner1">
+                <img src="perla.jpg" alt="Banner2">
+                <img src="rolex.jpg" alt="Banner3">
+            </section>
+
             <div class="top-row">
                 <h2>Curatori d'Immagine</h2>
                 <div class="filter-trigger">filter ▾</div>
             </div>
             
             <div class="grid-container" id="productGrid">
-                <div class="card" data-name="PLATT"><img src="plat.jpg" alt="PLATT"><h3>PLATT</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="PEARL"><img src="perla.jpg" alt="PEARL"><h3>PEARL</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="WATCH"><img src="rolex.jpg" alt="WATCH"><h3>WATCH</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="RING"><img src="fede (2).jpg" alt="RING"><h3>RING</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="SLVR"><img src="slvr.jpg" alt="SLVR"><h3>SLVR</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="DIAM"><img src="diam.jpg" alt="DIAM"><h3>DIAM</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="EMER"><img src="emer.jpg" alt="EMER"><h3>EMER</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="RUBY"><img src="ruby.jpg" alt="RUBY"><h3>RUBY</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="SAPP"><img src="zaff.jpg" alt="SAPP"><h3>SAPP</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
-                <div class="card" data-name="GOLD"><img src="oro.jpg" alt="GOLD"><h3>GOLD</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="PLATT" data-name="PLATT"><img src="plat.jpg" alt="PLATT"><h3>PLATT</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="PEARL" data-name="PEARL"><img src="perla.jpg" alt="PEARL"><h3>PEARL</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="WATCH" data-name="WATCH"><img src="rolex.jpg" alt="WATCH"><h3>WATCH</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="RING" data-name="RING"><img src="fede (2).jpg" alt="RING"><h3>RING</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="SLVR" data-name="SLVR"><img src="slvr.jpg" alt="SLVR"><h3>SLVR</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="DIAM" data-name="DIAM"><img src="diam.jpg" alt="DIAM"><h3>DIAM</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="EMER" data-name="EMER"><img src="emer.jpg" alt="EMER"><h3>EMER</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="RUBY" data-name="RUBY"><img src="ruby.jpg" alt="RUBY"><h3>RUBY</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="SAPP" data-name="SAPP"><img src="zaff.jpg" alt="SAPP"><h3>SAPP</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
+                <div class="card" id="GOLD" data-name="GOLD"><img src="oro.jpg" alt="GOLD"><h3>GOLD</h3><button class="btn btn-crypto">BUY NOW IN CRYPTO</button><button class="btn btn-trad">Paga con metodo tradizionale</button></div>
             </div>
         </main>
     </div>
