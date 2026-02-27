@@ -1,33 +1,34 @@
-/* --- BASE E LAYOUT --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; display: flex; flex-direction: column; min-height: 100vh; }
+body { font-family: sans-serif; background: #f9f9f9; }
 
-/* --- HEADER --- */
-header { background: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
-.logo { font-size: 20px; font-weight: bold; }
-.nav-links { display: flex; gap: 20px; font-weight: bold; color: #555; }
-.nav-links a { text-decoration: none; color: #555; }
-.nav-links a:hover { color: #000; }
-.search-bar { width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
-.header-icons { display: flex; gap: 15px; align-items: center; }
-.btn-connect { background-color: black; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+/* Header Nero */
+header { 
+    background: #000; 
+    color: #fff; 
+    padding: 15px 30px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
 
-/* --- GRID E CONTENT --- */
-.content-wrapper { display: flex; padding: 20px; gap: 20px; }
-aside { width: 250px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee; height: fit-content; }
-.grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-.card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; }
-.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 10px; }
-.btn { padding: 8px; border: none; border-radius: 4px; cursor: pointer; margin-top: 5px; width: 100%; font-size: 11px; font-weight: bold; }
-.btn-crypto { background: black; color: white; }
-.btn-trad { background: #f8f9fa; color: #333; border: 1px solid #ccc; margin-top: 5px; }
+.logo { font-weight: bold; font-size: 20px; }
 
-/* --- FOOTER E WHATSAPP --- */
-footer { background-color: #333; color: #fff; padding: 60px 0 30px 0; margin-top: auto; font-size: 14px; }
-.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 0 20px; }
-.footer-section h4 { color: #fff; margin-bottom: 20px; font-size: 18px; text-transform: uppercase; font-weight: 700; }
-.footer-section p { color: #bbb; margin-bottom: 15px; line-height: 1.6; }
-.newsletter-form { display: flex; margin-top: 15px; }
-.newsletter-input { flex-grow: 1; padding: 10px; border: 1px solid #555; background-color: #444; color: #fff; border-radius: 4px 0 0 4px; }
-.newsletter-submit { background-color: #555; color: #fff; border: 1px solid #555; padding: 10px 15px; cursor: pointer; border-radius: 0 4px 4px 0; }
-.whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 30px; z-index: 100; }
+.header-actions { display: flex; align-items: center; gap: 15px; }
+
+.btn-connect { background: #fff; color: #000; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+.hamburger { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+
+/* Menu Desktop nascosto */
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: #fff; text-decoration: none; }
+
+/* Menu Mobile Overlay */
+.mobile-menu { 
+    display: none; position: fixed; top: 0; right: 0; width: 100%; height: 100%; 
+    background: #fff; color: #000; flex-direction: column; align-items: center; 
+    padding-top: 100px; gap: 30px; z-index: 100; 
+}
+.mobile-menu.active { display: flex; }
+.close-btn { position: absolute; top: 20px; right: 20px; font-size: 30px; border: none; background: none; cursor: pointer; }
+.mobile-menu a { text-decoration: none; color: #000; font-size: 24px; font-weight: bold; }
