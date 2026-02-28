@@ -133,31 +133,37 @@
 
     <script>
       <script>
+   <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // 1. Logica Menu
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
-        // Controllo di sicurezza: esegui solo se gli elementi esistono
+        
         if (menuBtn && closeBtn && mobileMenu) {
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.remove('hidden');
             });
-            
             closeBtn.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         }
+
+        // 2. Logica Zoom Immagine
+        const img = document.getElementById('hero-img');
+        
+        // Questo "if" evita che lo script si blocchi se in una pagina non c'è l'immagine
+        if (img) {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                let scaleValue = 1 + (scrollY / 1000); 
+                if (scaleValue > 1.2) scaleValue = 1.2;
+                // NOTA: Qui ci vogliono i backtick ` non le virgolette semplici '
+                img.style.transform = scale(${scaleValue}); 
+            });
+        }
     });
-          // Effetto Zoom Immagine
-        const img = document.getElementById('contact-img');
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            let scaleValue = 1 + (scrollY / 1000); // Zoom leggero
-            if (scaleValue > 1.2) scaleValue = 1.2;
-            img.style.transform = scale(${scaleValue});
-        });
-    </script>
+</script>
     
 </body>
 </html>
