@@ -3,20 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Sito | Premium Style</title>
+    <title>Landolfi Style | Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000',
-                        accent: '#FFFFFF',
-                    }
-                }
-            }
-        }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -38,12 +26,16 @@
 
     <header class="bg-black border-b border-gray-900 p-6 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-widest uppercase">Curatori d'Immagine</div>
             
-            <div class="hidden md:block">
-                <input type="text" placeholder="Cerca..." class="bg-transparent border border-gray-800 text-gray-400 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-white transition">
-            </div>
+            <button class="hidden md:block opacity-70 hover:opacity-100 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+            </button>
 
+            <div class="text-2xl font-bold tracking-widest uppercase">LANDOLFI</div>
+            
             <button id="menu-btn" class="text-white cursor-pointer hover:text-gray-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -53,36 +45,36 @@
     </header>
 
     <section class="py-24 px-6 text-center bg-black">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">Il Futuro del Valore</h1>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">Stile Senza Tempo</h1>
         <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
-            Innovazione su blockchain Stellar. Design esclusivo, sicurezza totale, visione globale.
+            Innovazione e cura dei dettagli per il tuo look.
         </p>
         <button class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-gray-200 transition duration-300">
-            Scopri il Progetto
+            Prenota Ora
         </button>
     </section>
 
     <section class="bg-stone-100 py-20 px-6 text-zinc-900">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16">Ecosistema</h2>
+            <h2 class="text-3xl font-bold text-center mb-16">Selezione Prodotti</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 1</span></div>
-                    <h3 class="text-xl font-semibold mb-2">Governance</h3>
-                    <p class="text-stone-600 text-sm mb-6">Decisioni decentralizzate sulla rete Stellar.</p>
-                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 1</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Linea Davines</h3>
+                    <p class="text-stone-600 text-sm mb-6">Trattamenti nutrienti di alta qualità.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Vedi</button>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 2</span></div>
-                    <h3 class="text-xl font-semibold mb-2">Staking</h3>
-                    <p class="text-stone-600 text-sm mb-6">Metti a rendita i tuoi asset in sicurezza.</p>
-                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 2</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Linea Balmain</h3>
+                    <p class="text-stone-600 text-sm mb-6">Per capelli sani e luminosi.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Vedi</button>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 3</span></div>
-                    <h3 class="text-xl font-semibold mb-2">Utility</h3>
-                    <p class="text-stone-600 text-sm mb-6">Transazioni istantanee e commissioni zero.</p>
-                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 3</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Linea Landolfi</h3>
+                    <p class="text-stone-600 text-sm mb-6">L'esclusiva cura Landolfi.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Vedi</button>
                 </div>
             </div>
         </div>
@@ -91,21 +83,21 @@
     <footer class="bg-black border-t border-gray-800 py-16 px-6">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div>
-                <h2 class="text-2xl font-bold mb-4 tracking-widest text-white">Curatori d'Immagine</h2>
-                <p class="text-gray-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
+                <h2 class="text-2xl font-bold mb-4 tracking-widest text-white">LANDOLFI</h2>
+                <p class="text-gray-500 text-sm">Qualità e stile per la cura di barba e capelli.</p>
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-6 text-white">Navigazione</h3>
                 <ul class="space-y-4 text-gray-500 text-sm">
-                    <li><a href="#" class="hover:text-white transition">Whitepaper</a></li>
-                    <li><a href="#" class="hover:text-white transition">Tokenomics</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Condizioni di vendita</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-lg font-semibold mb-6 text-white">Social</h3>
+                <h3 class="text-lg font-semibold mb-6 text-white">Contatti</h3>
                 <div class="flex justify-center md:justify-start space-x-6 text-gray-500">
-                    <a href="#" class="hover:text-white transition">Istagram</a>
-                    <a href="#" class="hover:text-white transition">WhatsApp</a>
+                    <a href="#" class="hover:text-white transition">IG</a>
+                    <a href="#" class="hover:text-white transition">TikTok</a>
                 </div>
             </div>
         </div>
