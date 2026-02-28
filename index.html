@@ -6,11 +6,9 @@
     <title>Curatori d'Immagine | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
-<body class="bg-slate-950 text-stone-100">
+<body class="bg-stone-50 text-slate-900">
 
     <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center space-y-10">
         <button id="close-btn" class="absolute top-8 right-8 text-stone-100">
@@ -18,15 +16,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-        <a href="#" class="text-3xl font-light hover:text-stone-400 transition">Prodotti Davines</a>
-        <a href="#" class="text-3xl font-light hover:text-stone-400 transition">Il salone</a>
-        <a href="#" class="text-3xl font-light hover:text-stone-400 transition">Prenota un Taglio</a>
-        <a href="contatti.html" class="text-3xl font-light hover:text-stone-400 transition">Contattaci</a>
+        <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
+        <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
+        <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
     </div>
 
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="stellar.html" class="opacity-70 hover:opacity-100 transition duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-stone-100">
+            <a href="index.html" class="opacity-70 hover:opacity-100 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                     <circle cx="12" cy="12" r="3" />
@@ -41,41 +38,22 @@
         </div>
     </header>
 
-    <section class="py-24 px-6 text-center bg-slate-950">
+    <section class="py-24 px-6 text-center bg-slate-950 text-stone-100">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Stile Senza Tempo</h1>
-        <p class="text-lg text-stone-400 mb-10 max-w-xl mx-auto">
-            Innovazione e cura dei dettagli per il tuo look.
-        </p>
-        <button class="bg-stone-100 text-slate-950 px-10 py-4 rounded-full font-bold hover:bg-stone-300 transition duration-300">
-            Prenota Ora
-        </button>
+        <p class="text-lg text-stone-400 mb-10 max-w-xl mx-auto">Innovazione e cura dei dettagli per il tuo look.</p>
+        <a href="contatti.html" class="inline-block bg-stone-100 text-slate-950 px-10 py-4 rounded-full font-bold hover:bg-stone-300 transition duration-300">Prenota Ora</a>
     </section>
 
-    <section class="bg-stone-50 py-20 px-6 text-slate-900">
-        <div class="max-w-6xl mx-auto">
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-16">Prodotti DAVINES</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 1</span></div>
-                    <h3 class="text-xl font-semibold mb-2">Linea Davines</h3>
-                    <button class="w-full py-3 bg-slate-950 text-stone-100 rounded-lg hover:bg-slate-800 transition">Vedi</button>
+            <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 2</span></div>
-                    <h3 class="text-xl font-semibold mb-2"></h3>
-                    <button class="w-full py-3 bg-slate-950 text-stone-100 rounded-lg hover:bg-slate-800 transition">Vedi</button>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
-                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Prodotto 3</span></div>
-                    <h3 class="text-xl font-semibold mb-2">Linea Curatori d'Immagine</h3>
-                    <button class="w-full py-3 bg-slate-950 text-stone-100 rounded-lg hover:bg-slate-800 transition">Vedi</button>
-                </div>
-            </div>
         </div>
     </section>
 
     <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div>
                 <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
                 <p class="text-stone-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
@@ -84,7 +62,8 @@
                 <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
                 <ul class="space-y-4 text-stone-500 text-sm">
                     <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-stone-100 transition">Whitepaper</a></li>
+                    <li><a href="stellar.html" class="hover:text-stone-100 transition">Blockchain</a></li>
+                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Contatti</a></li>
                 </ul>
             </div>
             <div>
@@ -99,11 +78,30 @@
     </footer>
 
     <script>
+        // Menu Hamburger Logic
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
         closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+        // Generatore automatico prodotti (20 prodotti)
+        const grid = document.getElementById('product-grid');
+        const productCard = `
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
+                <div class="bg-stone-100 h-40 w-full rounded-xl mb-4 flex items-center justify-center">
+                    <span class="text-stone-400 text-xs">Foto Prodotto</span>
+                </div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-1">Linea Davines</h3>
+                <p class="text-xs text-slate-500 mb-3">Shampoo professionale</p>
+                <div class="font-bold text-slate-950 mb-4">€ 19,99</div>
+                <button class="w-full py-2 bg-slate-950 text-stone-100 text-sm rounded-lg hover:bg-slate-800 transition">Vedi</button>
+            </div>
+        `;
+        
+        for(let i = 0; i < 20; i++) {
+            grid.innerHTML += productCard;
+        }
     </script>
 </body>
 </html>
