@@ -3,48 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landolfi Style</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Il Mio Token Stellar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-white">
 
-    <header>
-        <div class="header-left">
-            <button class="menu-btn">☰</button>
-            <button class="search-btn">🔍</button>
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter">LOGO</div>
+        <div class="space-x-6">
+            <a href="#" class="hover:text-blue-400 transition">Home</a>
+            <a href="#" class="hover:text-blue-400 transition">Tokenomics</a>
+            <a href="#" class="bg-blue-600 px-5 py-2 rounded-full font-bold hover:bg-blue-500 transition">Compra Ora</a>
         </div>
-        <div class="logo">LANDOLFI</div>
-        <div class="header-right">
-            <button class="cart-btn">🛒</button>
-        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto py-20 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+            Il futuro dei Token su <span class="text-blue-500">Stellar</span>
+        </h1>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+            La descrizione breve e potente del tuo token. Descrivimi cosa dice il video qui.
+        </p>
+        <button class="bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-200 transition">
+            Scopri di più
+        </button>
     </header>
-
-    <main>
-        <h1>DAVINES</h1>
-        <p class="subtitle">13 prodotti</p>
-        
-        <div class="product-grid">
-            <div class="card">
-                <img src="shampo.jpg" alt="Prodotto">
-                <h3>Davines - Shampo</h3>
-                <p class="price">€22,90</p>
-                <button class="add-cart">🛒</button>
-            </div>
-            </div>
-    </main>
-
-    <button class="sticky-filter">Filtra e riordina</button>
-
-    <footer>
-        <div class="newsletter">
-            <h3>Resta sempre aggiornato</h3>
-            <input type="email" placeholder="E-mail">
-        </div>
-        <div class="links">
-            <p><strong>About</strong></p>
-            <p><strong>Link utili</strong></p>
-        </div>
-    </footer>
 
 </body>
 </html>
