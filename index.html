@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Tuo Progetto Token | Home</title>
+    <title>Il Mio Token | Black Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2D4036', // Verde scuro (Header/Buttons)
-                        accent: '#A6895D',  // Oro (Accenti)
+                        primary: '#000000', // Nero Puro
+                        accent: '#FFFFFF',  // Bianco per il massimo contrasto
                     }
                 }
             }
@@ -22,97 +22,78 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-<header class="bg-black border-b border-gray-900 p-6 sticky top-0 z-50">
+<body class="bg-black text-gray-200">
+
+    <header class="bg-black border-b border-gray-900 p-6 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="text-white text-2xl font-bold tracking-widest uppercase">TOKEN LOGO</div>
-
+            
             <div class="hidden md:block">
-                <input type="text" placeholder="Cerca..." class="bg-transparent border border-gray-800 text-gray-400 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-gray-500 transition">
+                <input type="text" placeholder="Cerca..." class="bg-transparent border border-gray-800 text-gray-400 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-white transition">
             </div>
 
             <div class="text-white cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-    
                 </svg>
             </div>
         </div>
     </header>
 
-    <section class="py-20 px-6 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-primary">Il Futuro del Valore</h1>
-        <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-            Innovazione su blockchain Stellar. Design esclusivo e sicurezza totale per i tuoi asset digitali.
+    <section class="py-24 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">Il Futuro del Valore</h1>
+        <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+            Innovazione su blockchain Stellar. Design esclusivo, sicurezza totale, visione globale.
         </p>
-        <button class="bg-accent text-white px-10 py-4 rounded-full font-bold hover:opacity-90 transition">
+        <button class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-gray-200 transition duration-300">
             Scopri il Progetto
         </button>
     </section>
 
     <section class="max-w-6xl mx-auto py-16 px-6">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Il Nostro Ecosistema</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-                <div class="bg-gray-100 h-48 w-full rounded-xl mb-6 flex items-center justify-center">
-                    <span class="text-gray-400">Immagine Token</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Governance</h3>
-                <p class="text-gray-500 text-sm mb-4">Partecipa alle decisioni cruciali del network.</p>
-                <button class="w-full py-3 bg-primary text-white rounded-lg hover:opacity-90 transition">Scopri</button>
+        <h2 class="text-3xl font-bold text-center text-white mb-12">Ecosistema</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
+                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 1</span></div>
+                <h3 class="text-xl font-semibold mb-2 text-white">Governance</h3>
+                <p class="text-gray-400 text-sm mb-6">Decisioni decentralizzate sulla rete Stellar.</p>
+                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
             </div>
-
-            <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-                <div class="bg-gray-100 h-48 w-full rounded-xl mb-6 flex items-center justify-center">
-                    <span class="text-gray-400">Immagine Token</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Staking</h3>
-                <p class="text-gray-500 text-sm mb-4">Metti a rendita i tuoi token in sicurezza.</p>
-                <button class="w-full py-3 bg-primary text-white rounded-lg hover:opacity-90 transition">Scopri</button>
+            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
+                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 2</span></div>
+                <h3 class="text-xl font-semibold mb-2 text-white">Staking</h3>
+                <p class="text-gray-400 text-sm mb-6">Metti a rendita i tuoi asset in sicurezza.</p>
+                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
             </div>
-
-            <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-                <div class="bg-gray-100 h-48 w-full rounded-xl mb-6 flex items-center justify-center">
-                    <span class="text-gray-400">Immagine Token</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Utility</h3>
-                <p class="text-gray-500 text-sm mb-4">Transazioni istantanee a costi quasi zero.</p>
-                <button class="w-full py-3 bg-primary text-white rounded-lg hover:opacity-90 transition">Scopri</button>
+            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
+                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 3</span></div>
+                <h3 class="text-xl font-semibold mb-2 text-white">Utility</h3>
+                <p class="text-gray-400 text-sm mb-6">Transazioni istantanee e commissioni zero.</p>
+                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
             </div>
         </div>
     </section>
-<footer class="bg-primary text-white py-16 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            
-            <div>
-                <h2 class="text-2xl font-bold mb-4 tracking-widest">NOME TOKEN</h2>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Costruiamo il futuro della finanza decentralizzata sulla blockchain Stellar. Trasparenza, sicurezza e velocità.
-                </p>
-            </div>
 
+    <footer class="bg-black border-t border-gray-800 py-16 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div>
-                <h3 class="text-lg font-semibold mb-6 text-accent">Navigazione</h3>
-                <ul class="space-y-4 text-gray-400 text-sm">
+                <h2 class="text-2xl font-bold mb-4 tracking-widest text-white">TOKEN LOGO</h2>
+                <p class="text-gray-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-white">Navigazione</h3>
+                <ul class="space-y-4 text-gray-500 text-sm">
                     <li><a href="#" class="hover:text-white transition">Whitepaper</a></li>
                     <li><a href="#" class="hover:text-white transition">Tokenomics</a></li>
-                    <li><a href="#" class="hover:text-white transition">Explorer Stellar</a></li>
                 </ul>
             </div>
-
             <div>
-                <h3 class="text-lg font-semibold mb-6 text-accent">Seguici</h3>
-                <div class="flex space-x-6 text-gray-400">
+                <h3 class="text-lg font-semibold mb-6 text-white">Social</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-gray-500">
                     <a href="#" class="hover:text-white transition">Twitter</a>
                     <a href="#" class="hover:text-white transition">Telegram</a>
-                    <a href="#" class="hover:text-white transition">Discord</a>
                 </div>
             </div>
-        </div>
-
-        <div class="max-w-6xl mx-auto mt-16 border-t border-emerald-900 pt-8 text-center text-gray-500 text-xs">
-            &copy; 2026 Nome del Tuo Token. Tutti i diritti riservati.
         </div>
     </footer>
 </body>
