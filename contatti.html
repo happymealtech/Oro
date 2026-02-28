@@ -97,13 +97,24 @@
     </footer>
 
     <script>
-        // Menu Hamburger
+      <script>
+    document.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 
+        // Controllo di sicurezza: esegui solo se gli elementi esistono
+        if (menuBtn && closeBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    });
+</script>
         // Effetto Zoom Immagine
         const img = document.getElementById('contact-img');
         window.addEventListener('scroll', () => {
@@ -113,5 +124,6 @@
             img.style.transform = scale(${scaleValue});
         });
     </script>
+    
 </body>
 </html>
