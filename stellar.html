@@ -6,14 +6,15 @@
     <title>Futuro Blockchain | Curatori d'Immagine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // Configurazione Tailwind per i colori personalizzati
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: '#000000',
-                        stellar: '#14141A', // Un nero leggermente più profondo per differenziare
-                        vision: '#F0F0F0', // Grigio chiarissimo per i testi
-                        highlight: '#FF4D4D', // Un rosso vibrante, come il nucleo centrale della tua visione
+                        stellar: '#14141A', 
+                        vision: '#F0F0F0', 
+                        highlight: '#3B82F6', // Un blu neon vibrante
                     }
                 }
             }
@@ -25,7 +26,7 @@
         
         /* Overlay a griglia neon sullo sfondo */
         .neon-grid {
-            background-image: linear-gradient(0deg, transparent 24%, rgba(37, 99, 235, .05) 25%, rgba(37, 99, 235, .05) 26%, transparent 27%, transparent 74%, rgba(37, 99, 235, .05) 75%, rgba(37, 99, 235, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(37, 99, 235, .05) 25%, rgba(37, 99, 235, .05) 26%, transparent 27%, transparent 74%, rgba(37, 99, 235, .05) 75%, rgba(37, 99, 235, .05) 76%, transparent 77%, transparent);
+            background-image: linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, .05) 25%, rgba(59, 130, 246, .05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, .05) 75%, rgba(59, 130, 246, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, .05) 25%, rgba(59, 130, 246, .05) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, .05) 75%, rgba(59, 130, 246, .05) 76%, transparent 77%, transparent);
             background-size: 50px 50px;
         }
 
@@ -49,8 +50,8 @@
 
         /* Animazione respirazione per il portale della foto */
         @keyframes breathe {
-            0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.4); }
-            50% { box-shadow: 0 0 50px rgba(37, 99, 235, 0.8); }
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(59, 130, 246, 0.8); }
         }
         .portal-animation { animation: breathe 4s infinite ease-in-out; }
 
@@ -82,7 +83,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
             </a>
             <div class="text-xl font-bold tracking-widest uppercase italic text-white">Curatori d'Immagine</div>
-            <button id="menu-btn" class="hover:text-blue-500 transition"><svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            <button id="menu-btn" class="hover:text-blue-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -145,50 +150,72 @@
     </footer>
 
     <script>
-        // 1. Logica Menu
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-
-        // 2. Logica Zoom Spaziale della Foto (da scala 0.5 a 1.6)
-        const img = document.getElementById('stellar-img');
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
+        // Assicuriamoci che il DOM sia caricato prima di eseguire lo script
+        document.addEventListener('DOMContentLoaded', () => {
             
-            // L'immagine parte piccola (scala 0.5) e arriva a grande (scala 1.6)
-            // dopo aver scrollato circa l'altezza di uno schermo intero
-            let scaleValue = 0.5 + (scrollY / windowHeight);
+            // 1. Logica Menu
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
             
-            // Limita lo zoom massimo
-            if (scaleValue > 1.6) scaleValue = 1.6;
-            
-            // Applica la trasformazione
-            img.style.transform = scale(${scaleValue});
-        });
+            if (menuBtn && closeBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                });
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            } else {
+                console.error("Errore: Impossibile trovare gli elementi del menu (menu-btn, close-btn, mobile-menu).");
+            }
 
-        // 3. Logica Notizie (Fade In al passaggio dello scroll)
-        const fadeSections = document.querySelectorAll('.fade-in-section');
-        const options = {
-            root: null, // usa la viewport come riferimento
-            rootMargin: '0px',
-            threshold: 0.1 // attiva quando il 10% dell'elemento è visibile
-        };
+            // 2. Logica Zoom Spaziale della Foto (da scala 0.5 a 1.6)
+            const img = document.getElementById('stellar-img');
+            if (img) {
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    
+                    // L'immagine parte piccola (scala 0.5) e arriva a grande (scala 1.6)
+                    // dopo aver scrollato circa l'altezza di uno schermo intero
+                    let scaleValue = 0.5 + (scrollY / windowHeight);
+                    
+                    // Limita lo zoom massimo a 1.6 (160% dell'originale)
+                    if (scaleValue > 1.6) scaleValue = 1.6;
+                    
+                    // Applica la trasformazione
+                    img.style.transform = scale(${scaleValue});
+                });
+            } else {
+                console.error("Errore: Impossibile trovare l'immagine (stellar-img).");
+            }
 
-        const observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // smetti di osservare una volta visibile
-                }
-            });
-        }, options);
+            // 3. Logica Notizie (Fade In al passaggio dello scroll)
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            if (fadeSections.length > 0) {
+                const options = {
+                    root: null, // usa la viewport come riferimento
+                    rootMargin: '0px',
+                    threshold: 0.1 // attiva quando il 10% dell'elemento è visibile
+                };
 
-        fadeSections.forEach(section => {
-            observer.observe(section);
+                const observer = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // smetti di osservare una volta visibile
+                        }
+                    });
+                }, options);
+
+                fadeSections.forEach(section => {
+                    observer.observe(section);
+                });
+            }
         });
     </script>
 </body>
 </html>
+
+  
+     
