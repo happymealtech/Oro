@@ -43,7 +43,7 @@
     </header>
 
     <section class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-slate-950">
-        <img id="intro.jpeg" src="intro.jpeg" alt="Saloon" 
+        <img id="hero-img" src="intro.jpeg" alt="Saloon" 
              class="w-full h-full object-cover transition-transform duration-75 ease-out will-change-transform">
         <div class="absolute inset-0 bg-black/30"></div>
     </section>
@@ -79,6 +79,11 @@
             </div>
             
             <div>
+                <div class="mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
                 <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Innovazione</h3>
                 <p class="text-slate-700 text-sm leading-relaxed">Tecnologia e passione unite per offrirti un servizio all'avanguardia.</p>
             </div>
@@ -110,22 +115,26 @@
     </footer>
 
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (menuBtn && closeBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-            closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menu Hamburger
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && closeBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+                closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            }
 
-        const img = document.getElementById('intro.jpeg');
-        window.addEventListener('scroll', () => {
-            if (!img) return;
-            const scrollY = window.scrollY;
-            let scaleValue = 1 + (scrollY / 1000); 
-            if (scaleValue > 1.2) scaleValue = 1.2;
-            img.style.transform = scale(${scaleValue});
+            // Effetto Zoom
+            const img = document.getElementById('hero-img');
+            window.addEventListener('scroll', () => {
+                if (!img) return;
+                const scrollY = window.scrollY;
+                let scaleValue = 1 + (scrollY / 1000); 
+                if (scaleValue > 1.2) scaleValue = 1.2;
+                img.style.transform = scale(${scaleValue});
+            });
         });
     </script>
 </body>
