@@ -8,21 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style> 
         body { font-family: 'Inter', sans-serif; } 
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; } 
     </style>
 </head>
 <body class="bg-slate-950 text-stone-100">
 
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center space-y-10">
+        <button id="close-btn" class="absolute top-8 right-8 text-stone-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
+        <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
+        <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
+    </div>
+
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-6xl mx-auto flex justify-between items-center text-stone-100">
             <a href="index.html" class="opacity-70 hover:opacity-100 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                     <circle cx="12" cy="12" r="3" />
                 </svg>
             </a>
-            <div class="text-xl font-bold tracking-widest uppercase italic">Curatori d'Immagine</div>
-            <div class="w-8"></div>
+            <div class="text-xl font-bold tracking-widest uppercase italic">Blockchain</div>
+            
+            <button id="menu-btn" class="hover:text-stone-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -34,77 +50,30 @@
     </section>
 
     <section class="relative z-10 bg-stone-50 py-20 px-6 text-slate-900">
-        <div class="max-w-4xl mx-auto space-y-16">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">La nostra visione Blockchain</h2>
-                <p class="text-lg leading-relaxed text-slate-700">
-                    La blockchain non è nata come una semplice tecnologia, ma come una risposta alla necessità di verità in un mondo digitale spesso opaco. Per noi, Curatori d'Immagine, questa trasparenza è il cuore della fiducia. Abbiamo scelto la tecnologia Stellar non solo per la sua velocità, ma perché rispecchia la nostra filosofia: efficienza, sicurezza e un legame immutabile tra il nostro lavoro e i nostri clienti.
-                </p>
-            </div>
-
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Perché l'abbiamo scelta</h2>
-                <p class="text-lg leading-relaxed text-slate-700">
-                    Abbiamo scelto la tecnologia blockchain, e nello specifico il protocollo Stellar, perché rispecchia esattamente il nostro modo di lavorare. Nella nostra professione, l'immagine è tutto. Ma dietro l'immagine, vogliamo che ci sia sostanza. Stellar ci permette di operare in un ecosistema dove la velocità incontra la sicurezza, riducendo le barriere e le inefficienze. È il nostro impegno concreto verso la trasparenza e l'innovazione.
-                </p>
-            </div>
-            
-            <div class="h-64"></div>
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Trasparenza e Sicurezza</h2>
+            <p class="text-lg leading-relaxed">
+                Il contenuto dedicato alla tecnologia blockchain e ai valori di sicurezza che la nostra realtà porta nel mondo digitale.
+            </p>
         </div>
-        
-        <section class="bg-slate-950 text-stone-100 py-20 px-6">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl text-center hover:border-slate-600 transition">
-                    <img src="francesco.jpg" alt="Francesco Iovinella" class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-2 border-slate-700">
-                    <p class="text-stone-300 mb-6 italic">"La sicurezza dei tuoi asset su rete Stellar è la nostra priorità. Ogni transazione nel salone Curatori è criptata, veloce e trasparente, garantendoti un'esperienza Web3 senza pensieri."</p>
-                    <h3 class="text-xl font-bold">FRANCESCO IOVINELLA</h3>
-                    <p class="text-stone-500 uppercase tracking-widest text-sm mt-1">Titolare</p>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl text-center hover:border-slate-600 transition">
-                    <img src="gennaro.jpg" alt="Gennaro Mottola" class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-2 border-slate-700">
-                    <p class="text-stone-300 mb-6 italic">"Credo in un futuro dove la bellezza non è solo un servizio ma un valore certificato. Ho unito l'eccellenza dell'hairstyling alla tecnologia per offrirti uno stile unico e digitale."</p>
-                    <h3 class="text-xl font-bold">GENNARO MOTTOLA</h3>
-                    <p class="text-stone-500 uppercase tracking-widest text-sm mt-1">Esperto in Blockchain</p>
-                </div>
-            </div>
-        </section>
     </section>
 
-    <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-                <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
-                <p class="text-stone-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
-                <ul class="space-y-4 text-stone-500 text-sm">
-                    <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-stone-100 transition">Whitepaper</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-6 text-stone-100">Social</h3>
-                <div class="flex justify-center md:justify-start space-x-6 text-stone-500">
-                    <a href="#" class="hover:text-stone-100 transition">Instagram</a>
-                    <a href="#" class="hover:text-stone-100 transition">WhatsApp</a>
-                     <a href="#" class="hover:text-stone-100 transition">TikTok</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script>
-        const img = document.getElementById('stellar-img');
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
         
+        // Logica Menu Hamburger
+        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+        // Script Zoom Immagine
+        const img = document.getElementById('stellar-img');
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
-            // Calcolo scala: parte da 0.6 (dimensione iniziale) e cresce
             let scaleValue = 0.6 + (scrollY / windowHeight);
             if (scaleValue > 1.5) scaleValue = 1.5;
-            
             img.style.transform = scale(${scaleValue});
         });
     </script>
