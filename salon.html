@@ -115,9 +115,9 @@
     </footer>
 
     <script>
-      <script>
+    <script>
+    // 1. LOGICA MENU (Deve funzionare sempre)
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Logica Menu
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -130,21 +130,21 @@
                 mobileMenu.classList.add('hidden');
             });
         }
+    });
 
-        // 2. Logica Zoom Immagine
+    // 2. LOGICA ZOOM (Solo se l'immagine esiste)
+    document.addEventListener('DOMContentLoaded', () => {
         const img = document.getElementById('hero-img');
-        
-        // Questo "if" evita che lo script si blocchi se in una pagina non c'è l'immagine
         if (img) {
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
                 let scaleValue = 1 + (scrollY / 1000); 
                 if (scaleValue > 1.2) scaleValue = 1.2;
-                // NOTA: Qui ci vogliono i backtick ` non le virgolette semplici '
-                img.style.transform = scale(${scaleValue}); 
+                img.style.transform = scale(${scaleValue}); // Backtick obbligatori
             });
         }
     });
+</script>
 </script>
 </body>
 </html>
