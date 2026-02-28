@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Saloon | Curatori d'Immagine</title>
+    <title>Saloon | Curatori d'Immagine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style> 
-        body { font-family: 'Inter', sans-serif; opacity: 0; transition: opacity 0.5s ease-in; } 
-        html { scroll-behavior: smooth; }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        body { font-family: 'Inter', sans-serif; } 
     </style>
 </head>
-<body class="bg-stone-50 text-slate-950 onload="document.body.style.opacity='1'">
+<body class="bg-stone-50 text-slate-950">
 
     <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center space-y-10">
         <button id="close-btn" class="absolute top-8 right-8 text-stone-100">
@@ -28,54 +19,65 @@
             </svg>
         </button>
         <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
+        <a href="saloon.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
         <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
-         <a href="salon.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
-         <a href="salon.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Davines</a>
+         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Davines</a>
     </div>
 
-    <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50onload="document.body.style.opacity='1'">
-        <div class="max-w-7xl mx-auto flex justify-between items-center text-stone-100 onload="document.body.style.opacity='1'">
-            <a href="index.html" class="opacity-70 hover:opacity-100 transition duration-300onload="document.body.style.opacity='1'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5onload="document.body.style.opacity='1'">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zonload="document.body.style.opacity='1'" />
-                    <circle cx="12" cy="12" r="3onload="document.body.style.opacity='1'" />
+    <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-stone-100">
+            <a href="index.html" class="opacity-70 hover:opacity-100 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
                 </svg>
             </a>
-            <div class="text-2xl font-bold tracking-widest uppercase italiconload="document.body.style.opacity='1'">Saloon</div>
-            <button id="menu-btn" class="hover:text-stone-400 transitiononload="document.body.style.opacity='1'">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColoronload="document.body.style.opacity='1'">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7onload="document.body.style.opacity='1'" />
+            <div class="text-xl font-bold tracking-widest uppercase italic">Saloon</div>
+            <button id="menu-btn" class="hover:text-stone-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
     </header>
 
-    <section class="relative h-[80vh] parallax flex items-center justify-center onload="document.body.style.opacity='1'" style="background-image: url('saloon.jpeg');">
-        <div class="absolute inset-0 bg-black/50onload="document.body.style.opacity='1'"></div>
-        <div class="relative z-10 text-center text-stone-100 px-6onload="document.body.style.opacity='1'">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4onload="document.body.style.opacity='1'">Curatori d'Immagine</h1>
-            <p class="text-xl md:text-2xl font-light text-stone-300onload="document.body.style.opacity='1'">L'arte dello styling incontra la precisione digitale.</p>
-        </div>
+    <section class="h-[60vh] w-full overflow-hidden">
+        <img src="saloon.jpeg" alt="Il Saloon" class="w-full h-full object-cover">
     </section>
 
-    <main class="py-24 px-6 bg-stone-50onload="document.body.style.opacity='1'">
-        <div class="max-w-4xl mx-auto text-center onload="document.body.style.opacity='1'">
-            <h2 class="text-4xl font-bold mb-10 text-slate-950 onload="document.body.style.opacity='1'">Un'Esperienza Unica</h2>
-            <p class="text-lg leading-relaxed text-slate-700 mb-8onload="document.body.style.opacity='1'">
-                Benvenuti nel cuore pulsante dei Curatori d'Immagine. Il nostro salone non è semplicemente uno spazio dedicato alla bellezza, ma un laboratorio di stile dove ogni dettaglio è studiato per esaltare la tua unicità. L'ambiente è concepito per offrire il massimo comfort e relax, unendo un design raffinato a tecnologie all'avanguardia.
-            </p>
-            <p class="text-lg leading-relaxed text-slate-700onload="document.body.style.opacity='1'">
-                Qui, la tradizione dell'hair-styling si fonde con una visione moderna e digitale, creando un percorso personalizzato che va oltre il semplice taglio o colore. È un viaggio sensoriale pensato per chi cerca l'eccellenza e non si accontenta del convenzionale.
-            </p>
-        </div>
+    <main class="py-20 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-6">Benvenuti nel Saloon</h1>
+        <p class="text-lg text-slate-700 leading-relaxed mb-8">
+            Descrivi qui il tuo salone, la tua visione e perché è un posto speciale.
+        </p>
     </main>
 
-    <section class="py-24 px-6 bg-slate-950 text-stone-100 reveal border-t border-slate-800onload="document.body.style.opacity='1'">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center onload="document.body.style.opacity='1'">
-            <div class="onload="document.body.style.opacity='1'">
-                <img src="intro.jpeg" alt="Il Progetto Curatori" class="w-full h-auto rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105onload="document.body.style.opacity='1'">
+    <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div><h2 class="text-2xl font-bold text-stone-100">Curatori d'Immagine</h2></div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
+                <ul class="space-y-4 text-stone-500 text-sm">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="saloon.html">Saloon</a></li>
+                    <li><a href="stellar.html">Blockchain</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                      <li><a href="contatti.html">Davines</a></li>
+                </ul>
             </div>
-            <div class="space-y-8 onload="document.body.style.opacity='1'">
-                <h2 class="text-4xl font-bold tracking-tight onload="document.body.style.opacity='1'">Il Progetto: Oltre la Bellezza</h2>
-                <p class="text-lg text-stone-300 leading-relaxedonload="document.body.style.opacity='1'">
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && closeBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+            closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        }
+    </script>
+</body>
+</html>
