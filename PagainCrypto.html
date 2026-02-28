@@ -37,6 +37,31 @@
     </div>
 
     <main class="max-w-2xl mx-auto px-6 py-16 -mt-24 relative z-10">
+        <main class="max-w-2xl mx-auto px-6 py-16">
+    <div class="cyber-card p-8 rounded-2xl border border-blue-800">
+        
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-4 text-blue-400 tracking-widest uppercase">// 1. Identità Digitale</h2>
+            <button id="walletBtn" onclick="connettiWallet()" 
+                    class="w-full bg-blue-600 text-white py-4 rounded-lg font-bold tracking-widest uppercase hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)] animate-pulse">
+                CONNETTI LOBSTR WALLET
+            </button>
+        </div>
+
+        <div id="wallet-info" class="hidden mb-8 p-4 bg-green-900/20 border border-green-500 rounded text-center">
+            <p class="text-green-500 text-xs uppercase font-bold">Wallet Connesso</p>
+            <p class="text-white text-xs mt-1">G-STELLAR-8892-XYZ-00</p>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-bold mb-4 text-blue-400 tracking-widest uppercase">// 2. Dettagli Transazione</h2>
+            <div class="bg-black p-4 rounded font-mono text-sm text-blue-200 border border-blue-800 break-all">
+                G-STELLAR-ADDRESS-992-X-CHAIN-2026
+            </div>
+        </div>
+
+    </div>
+</main>
         
      
         </div>
@@ -58,28 +83,7 @@
                      <li><a href="#" class="hover:text-blue-500">Davines</a></li>
                      <li><a href="#" class="hover:text-blue-500">Paga in Crypto</a></li>
                 </ul>
-                <div class="cyber-card p-8 rounded-2xl border border-blue-800">
-    <h2 class="text-2xl font-bold mb-6 text-blue-400 tracking-widest uppercase">// Connetti Wallet</h2>
-    
-    <button id="walletBtn" onclick="connettiWallet()" 
-            class="w-full bg-blue-900/20 border border-blue-500 text-blue-400 py-4 rounded-lg font-bold tracking-widest uppercase hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-3">
-        <span id="btnText">CONNETTI WALLET (STELLAR)</span>
-    </button>
-
-    <div id="wallet-info" class="hidden mt-6 p-4 bg-green-900/20 border border-green-500 rounded">
-        <p class="text-green-500 text-xs text-center uppercase tracking-widest font-bold">Wallet Connesso con Successo</p>
-        <p class="text-white text-xs mt-2 break-all text-center opacity-70">Indirizzo: G-STELLAR-8892-XYZ-00</p>
-    </div>
-
-    <div class="my-8 border-t border-blue-900"></div>
-
-    <div class="space-y-4">
-        <label class="text-[10px] text-blue-500 uppercase tracking-widest">Destinatario:</label>
-        <div class="bg-black p-3 rounded font-mono text-sm text-blue-200 border border-blue-800">
-            G-STELLAR-ADDRESS-992-X-CHAIN-2026
-        </div>
-    </div>
-</div>
+               
 
 <script>
     function connettiWallet() {
