@@ -1,76 +1,128 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar | Curatori d'Immagine</title>
+    <title>Curatori d'Immagine | Blockchain</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; }
+        .neon-border { border: 1px solid #1e40af; box-shadow: 0 0 10px rgba(30, 64, 175, 0.5); }
+        .neon-border:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+        .blue-glow { border-color: #3b82f6 !important; box-shadow: 0 0 30px rgba(59, 130, 246, 0.6) !important; }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-black z-50 flex flex-col items-center justify-center space-y-8">
-        <button id="close-btn" class="absolute top-8 right-8 text-white text-4xl">&times;</button>
-        <a href="index.html" class="text-3xl font-light hover:text-blue-500">Home</a>
-    </div>
-
-    <header class="border-b border-gray-800 p-6 sticky top-0 bg-black z-40">
+    <header class="border-b border-gray-800 p-6 sticky top-0 bg-black/90 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="opacity-70 hover:opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
-            </a>
+            <svg class="h-8 w-8 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
             <div class="text-xl font-bold tracking-widest uppercase italic">Curatori d'Immagine</div>
-            <button id="menu-btn" class="hover:text-blue-500">
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-            </button>
+            <button id="menu-btn" class="hover:text-blue-500">☰</button>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black z-50 flex flex-col items-center justify-center space-y-8">
+        <button id="close-btn" class="absolute top-8 right-8 text-4xl">&times;</button>
+        <a href="index.html" class="text-2xl hover:text-blue-500">Home</a>
+        <a href="#" class="text-2xl hover:text-blue-500">Servizi</a>
+        <a href="#" class="text-2xl hover:text-blue-500">Contatti</a>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
         
-        <div class="flex justify-center mb-16">
-            <img id="stellar-img" src="stellar.jpeg" alt="Stellar" 
-                 class="w-full rounded-2xl border-2 border-transparent transition-all duration-300 cursor-pointer hover:border-blue-500">
+        <div class="flex justify-center mb-20">
+            <img id="main-img" src="stellar.jpeg" alt="Stellar" class="w-full max-w-lg rounded-3xl transition-all duration-500 cursor-pointer border-2 border-transparent">
         </div>
 
-        <div class="space-y-6">
-            <div class="p-8 border border-gray-800 bg-gray-900 rounded-xl">
-                <h2 class="text-2xl font-bold text-blue-400 mb-4">La Visione</h2>
-                <p class="text-gray-300">La blockchain non è solo codice, ma il libro mastro della fiducia. I Curatori d'Immagine portano questo valore nell'era del Web3.</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-20">
+            <div class="neon-border p-8 rounded-2xl bg-gray-900 transition-all">
+                <h3 class="text-blue-400 font-bold mb-2">STYLING DIGITALE</h3>
+                <p class="text-sm text-gray-400">Prenota il tuo look esclusivo tramite il nostro portale on-chain.</p>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-8 border border-gray-800 bg-gray-900 rounded-xl">
-                    <h3 class="text-xl font-bold text-blue-400 mb-2">Il Titolare</h3>
-                    <p class="text-gray-300">Visione strategica che unisce l'estetica classica alla potenza dell'innovazione tecnologica.</p>
-                </div>
-                <div class="p-8 border border-gray-800 bg-gray-900 rounded-xl">
-                    <h3 class="text-xl font-bold text-blue-400 mb-2">Esperto Blockchain</h3>
-                    <p class="text-gray-300">Responsabile tecnico: garantisce l'immutabilità dei dati e l'efficienza della rete Stellar.</p>
-                </div>
+            <div class="neon-border p-8 rounded-2xl bg-gray-900 transition-all">
+                <h3 class="text-blue-400 font-bold mb-2">SMART CONSULTING</h3>
+                <p class="text-sm text-gray-400">Consulenze personalizzate tracciate su Stellar per risultati garantiti.</p>
+            </div>
+            <div class="neon-border p-8 rounded-2xl bg-gray-900 transition-all">
+                <h3 class="text-blue-400 font-bold mb-2">TOKEN REWARDS</h3>
+                <p class="text-sm text-gray-400">Colleziona i nostri Token per sbloccare trattamenti e prodotti in omaggio.</p>
+            </div>
+            <div class="neon-border p-8 rounded-2xl bg-gray-900 transition-all">
+                <h3 class="text-blue-400 font-bold mb-2">CLUB CURATORI</h3>
+                <p class="text-sm text-gray-400">Entra nell'élite del salone. Accesso riservato a trattamenti speciali.</p>
             </div>
         </div>
+
+        <div class="space-y-10 mb-20">
+            <div class="border-l-4 border-blue-500 pl-6">
+                <h2 class="text-3xl font-bold mb-4 text-blue-500">VISIONE</h2>
+                <p class="text-gray-300 italic">"Essere il punto di riferimento globale dove l'eccellenza della bellezza si fonde con la tecnologia, trasformando ogni salone in un nodo di valore sulla rete Stellar."</p>
+            </div>
+            <div class="border-l-4 border-blue-500 pl-6">
+                <h2 class="text-3xl font-bold mb-4 text-blue-500">MISSIONE</h2>
+                <p class="text-gray-300 italic">"Curiamo la tua immagine con maestria artigianale e proteggiamo la tua identità digitale sulla blockchain, offrendo trasparenza, innovazione e asset digitali sicuri."</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="neon-border p-6 rounded-xl text-center">
+                <div class="mb-4">Francesco Iovinella - Titolare</div>
+                <p class="text-xs text-gray-400">La sicurezza dei tuoi asset su rete Stellar è la nostra priorità.</p>
+            </div>
+            <div class="neon-border p-6 rounded-xl text-center">
+                <div class="mb-4">Gennaro Mottola - Esperto Blockchain</div>
+                <p class="text-xs text-gray-400">Credo in un futuro dove la bellezza è un valore certificato.</p>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-blue-500">FAQ</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-800 pb-4">Quali sono i vostri prezzi?</div>
+                <div class="border-b border-gray-800 pb-4">Posso pagare in crypto?</div>
+                <div class="border-b border-gray-800 pb-4">Come funzionano i token?</div>
+                <div class="border-b border-gray-800 pb-4">I miei dati sono sicuri?</div>
+            </div>
+        </div>
+
     </main>
 
-    <footer class="mt-20 border-t border-gray-800 p-10 text-center text-gray-500">
-        <p>Curatori d'Immagine © 2026</p>
+    <footer class="bg-gray-900 border-t border-blue-900 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Curatori d'Immagine</h4>
+                <p class="text-sm text-gray-500">L'eccellenza tecnologica al servizio della tua bellezza.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Navigazione</h4>
+                <ul class="text-sm text-gray-500 space-y-2">
+                    <li><a href="#">Servizi</a></li>
+                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Seguici</h4>
+                <p class="text-sm text-gray-500">Twitter | Telegram | Discord</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs text-gray-600">© 2026 Tutti i diritti riservati.</div>
     </footer>
 
     <script>
-        // Menu Hamburger
+        // Menu
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
         closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 
-        // Interazione Foto
-        const img = document.getElementById('stellar-img');
+        // Effetto Click Foto
+        const img = document.getElementById('main-img');
         img.addEventListener('click', () => {
-            img.classList.toggle('border-blue-500');
-            img.classList.toggle('shadow-[0_0_30px_rgba(59,130,246,0.5)]');
+            img.classList.toggle('blue-glow');
         });
     </script>
 </body>
 </html>
-  
-     
