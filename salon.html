@@ -54,28 +54,36 @@
             Descrivi qui il tuo salone, la tua visione e perché è un posto speciale.
         </p>
     </main>
-     <section class="py-16 px-6 bg-stone-50 text-slate-950 border-t border-stone-200">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-        
-        <div>
-            <div class="mb-4 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-            </div>
-            <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Qualità Certificata</h3>
-            <p class="text-slate-700 text-sm leading-relaxed">Selezioniamo solo i migliori prodotti per garantirti un risultato impeccabile in ogni trattamento.</p>
-        </div>
 
-        <div>
-            <div class="mb-4 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
+    <section class="py-16 px-6 bg-stone-50 text-slate-950 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            
+            <div>
+                <div class="mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Qualità Certificata</h3>
+                <p class="text-slate-700 text-sm leading-relaxed">Selezioniamo solo i migliori prodotti per garantirti un risultato impeccabile in ogni trattamento.</p>
             </div>
-            <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Supporto Dedicato</h3>
-            <p class="text-slate-700 text-sm leading-relaxed">Siamo sempre a tua disposizione, dalla prima consulenza telefonica fino al post-trattamento.</p>
+
+            <div>
+                <div class="mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Supporto Dedicato</h3>
+                <p class="text-slate-700 text-sm leading-relaxed">Siamo sempre a tua disposizione, dalla prima consulenza telefonica fino al post-trattamento.</p>
+            </div>
+            
+            <div>
+                <h3 class="font-bold text-lg mb-2 tracking-widest uppercase">Innovazione</h3>
+                <p class="text-slate-700 text-sm leading-relaxed">Tecnologia e passione unite per offrirti un servizio all'avanguardia.</p>
+            </div>
         </div>
+    </section>
 
     <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
@@ -102,7 +110,6 @@
     </footer>
 
     <script>
-        // Logica Menu Hamburger
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -112,9 +119,9 @@
             closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         }
 
-        // Script Zoom Immagine
-        const img = document.getElementById('salon-img');
+        const img = document.getElementById('intro.jpeg');
         window.addEventListener('scroll', () => {
+            if (!img) return;
             const scrollY = window.scrollY;
             let scaleValue = 1 + (scrollY / 1000); 
             if (scaleValue > 1.2) scaleValue = 1.2;
