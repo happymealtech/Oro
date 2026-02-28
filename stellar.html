@@ -6,12 +6,9 @@
     <title>Blockchain | Curatori d'Immagine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style> 
-        body { font-family: 'Inter', sans-serif; } 
-        html { scroll-behavior: smooth; } 
-    </style>
+    <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
-<body class="bg-slate-950 text-stone-100">
+<body class="bg-stone-50 text-slate-900">
 
     <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950 z-[100] flex flex-col items-center justify-center space-y-10">
         <button id="close-btn" class="absolute top-8 right-8 text-stone-100">
@@ -25,15 +22,14 @@
     </div>
 
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center text-stone-100">
-            <a href="index.html" class="opacity-70 hover:opacity-100 transition">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-stone-100">
+            <a href="index.html" class="opacity-70 hover:opacity-100 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                     <circle cx="12" cy="12" r="3" />
                 </svg>
             </a>
-            <div class="text-xl font-bold tracking-widest uppercase italic">Blockchain</div>
-            
+            <div class="text-2xl font-bold tracking-widest uppercase">Blockchain</div>
             <button id="menu-btn" class="hover:text-stone-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -42,40 +38,44 @@
         </div>
     </header>
 
-    <section class="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-slate-950">
-        <div id="sticky-container" class="sticky top-0 h-[100vh] w-full flex items-center justify-center">
-            <img id="stellar-img" src="stellar.jpeg" alt="Visione Blockchain" 
-                 class="w-[60%] h-auto rounded-xl shadow-2xl transition-transform duration-75 ease-out will-change-transform">
-        </div>
-    </section>
+    <main class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-8">Tecnologia Blockchain</h1>
+        <p class="text-lg text-slate-700">Contenuti dedicati alla sicurezza e trasparenza.</p>
+    </main>
 
-    <section class="relative z-10 bg-stone-50 py-20 px-6 text-slate-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Trasparenza e Sicurezza</h2>
-            <p class="text-lg leading-relaxed">
-                Il contenuto dedicato alla tecnologia blockchain e ai valori di sicurezza che la nostra realtà porta nel mondo digitale.
-            </p>
+    <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
+                <p class="text-stone-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
+                <ul class="space-y-4 text-stone-500 text-sm">
+                    <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
+                    <li><a href="stellar.html" class="hover:text-stone-100 transition">Blockchain</a></li>
+                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Contatti</a></li>
+                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Saloon</a></li>
+                    <li><a href="contatti.html" class="hover:text-stone-100 transition">DAVINES</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Social</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-stone-500">
+                    <a href="#" class="hover:text-stone-100 transition">Instagram</a>
+                    <a href="#" class="hover:text-stone-100 transition">WhatsApp</a>
+                    <a href="#" class="hover:text-stone-100 transition">TikTok</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        // Logica Menu Hamburger
         menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
         closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-
-        // Script Zoom Immagine
-        const img = document.getElementById('stellar-img');
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
-            let scaleValue = 0.6 + (scrollY / windowHeight);
-            if (scaleValue > 1.5) scaleValue = 1.5;
-            img.style.transform = scale(${scaleValue});
-        });
     </script>
 </body>
 </html>
