@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Crypto | Curatori d'Immagine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; }
+        .glass-card { 
+            background: rgba(17, 24, 39, 0.5); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(59, 130, 246, 0.3); 
+        }
+        .neon-glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    </style>
+</head>
+<body>
+
+    <header class="border-b border-gray-800 p-6 sticky top-0 bg-black/90 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <svg class="h-8 w-8 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+            <div class="text-xl font-bold tracking-widest uppercase italic">Curatori d'Immagine</div>
+            <a href="index.html" class="hover:text-blue-500">Torna alla Home</a>
+           <a href="index.html" class="hover:text-blue-500">Torna alla Blockchain</a>
+           <a href="index.html" class="hover:text-blue-500">Torna Saloon</a>
+           <a href="index.html" class="hover:text-blue-500">Torna a Davines</a>
+           <a href="index.html" class="hover:text-blue-500">Torna a Contatti</a>
+         
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-6 py-16">
+        
+        <div class="glass-card p-10 rounded-3xl neon-glow text-center">
+            <h2 class="text-3xl font-bold mb-8 text-blue-400">Paga in Crypto (Stellar)</h2>
+            
+            <div class="space-y-6">
+                <div class="text-left">
+                    <label class="block text-gray-400 text-sm mb-2">Il nostro indirizzo Wallet (Stellar):</label>
+                    <div class="flex items-center gap-2 bg-black/50 p-4 rounded-xl border border-gray-700">
+                        <code id="wallet-address" class="text-blue-300 text-sm font-mono flex-1">G-STELLAR-ADDRESS-EXAMPLE-8892-XYZ</code>
+                        <button onclick="copyAddress()" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-xs font-bold transition">COPIA</button>
+                    </div>
+                </div>
+
+                <div class="text-left bg-blue-900/10 p-6 rounded-2xl border border-blue-800/30">
+                    <h4 class="font-bold text-blue-400 mb-4">Procedura di invio:</h4>
+                    <ul class="text-gray-300 text-sm space-y-3 list-decimal pl-4">
+                        <li>Apri il tuo wallet Stellar preferito (es. Lobstr, Freighter).</li>
+                        <li>Incolla l'indirizzo indicato sopra nel campo destinatario.</li>
+                        <li>Inserisci l'importo concordato.</li>
+                        <li>Conferma la transazione e attendi il blocco sulla rete.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <a href="mailto:info@curatori.it" class="block w-full bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-full font-bold transition">Invia Ricevuta (Email)</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 border-t border-blue-900 py-12 px-6 mt-20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Curatori d'Immagine</h4>
+                <p class="text-sm text-gray-500">L'eccellenza tecnologica al servizio della tua bellezza.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Navigazione</h4>
+                <ul class="text-sm text-gray-500 space-y-2">
+                    <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Contatti</a></li>
+                   <li><a href="#" class="hover:text-blue-500">Blockchain</a></li>
+                   <li><a href="#" class="hover:text-blue-500">Saloon</a></li>
+                   <li><a href="#" class="hover:text-blue-500">Davines</a></li>
+                   <li><a href="#" class="hover:text-blue-500">Pga in Crypto</a></li>
+                   
+                  </a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-500 mb-4">Seguici</h4>
+                <p class="text-sm text-gray-500">Twitter | Telegram | Discord</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs text-gray-600">© 2026 Tutti i diritti riservati.</div>
+    </footer>
+
+    <script>
+        function copyAddress() {
+            const address = document.getElementById("wallet-address").innerText;
+            navigator.clipboard.writeText(address);
+            alert("Indirizzo copiato negli appunti!");
+        }
+    </script>
+</body>
+</html>
