@@ -150,22 +150,36 @@
     </footer>
 
     <script>
-        // Logica Menu Hamburger
+      <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Logica Menu
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-        closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        
+        if (menuBtn && closeBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
 
-        // Script Zoom Immagine
-        const img = document.getElementById('stellar-img');
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
-            let scaleValue = 0.6 + (scrollY / (windowHeight * 0.8));
-            if (scaleValue > 1.5) scaleValue = 1.5;
-            img.style.transform = scale(${scaleValue});
-        });
-    </script>
+        // 2. Logica Zoom Immagine
+        const img = document.getElementById('hero-img');
+        
+        // Questo "if" evita che lo script si blocchi se in una pagina non c'è l'immagine
+        if (img) {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                let scaleValue = 1 + (scrollY / 1000); 
+                if (scaleValue > 1.2) scaleValue = 1.2;
+                // NOTA: Qui ci vogliono i backtick ` non le virgolette semplici '
+                img.style.transform = scale(${scaleValue}); 
+            });
+        }
+    });
+</script>
 </body>
 </html>
