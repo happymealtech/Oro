@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contattami | Curatori d'Immagine</title>
+    <title>Contatti | Curatori d'Immagine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style> body { font-family: 'Inter', sans-serif; } </style>
+    <style> 
+        body { font-family: 'Inter', sans-serif; } 
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body class="bg-stone-50 text-slate-900">
 
@@ -19,10 +22,8 @@
         <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
         <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
-         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
-         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Davines</a>
-    </div>
-    </div>
+        <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
+        <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Davines</a>
     </div>
 
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
@@ -33,7 +34,7 @@
                     <circle cx="12" cy="12" r="3" />
                 </svg>
             </a>
-            <div class="text-2xl font-bold tracking-widest uppercase">Contatti</div>
+            <div class="text-2xl font-bold tracking-widest uppercase italic">Contatti</div>
             <button id="menu-btn" class="hover:text-stone-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -42,49 +43,75 @@
         </div>
     </header>
 
-    <main class="py-20 px-6 max-w-2xl mx-auto">
-        <h1 class="text-4xl font-bold mb-8">Contattami</h1>
-        <form class="space-y-6">
-             <input type="text" placeholder="Nome" class="w-full p-3 border rounded-lg">
-             <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
-             <textarea placeholder="Messaggio" class="w-full p-3 border rounded-lg"></textarea>
-             <button class="w-full bg-slate-950 text-white p-4 rounded-lg">INVIA</button>
+    <section class="relative h-[60vh] w-full flex items-center justify-center overflow-hidden bg-slate-950">
+        <img id="contact-img" src="let.jpeg" alt="Contatti" 
+             class="w-full h-full object-cover transition-transform duration-75 ease-out will-change-transform">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 class="text-white text-5xl md:text-7xl font-bold tracking-tighter">Contattami</h1>
+        </div>
+    </section>
+
+    <main class="py-20 px-6 max-w-3xl mx-auto">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">La prima call è gratuita!</h2>
+            <p class="text-slate-600">Mandami un messaggio con le tue domande: rispondo a tutti entro 24 ore al massimo.</p>
+        </div>
+        
+        <form class="space-y-6 bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
+            <input type="text" placeholder="Il tuo nome" class="w-full p-4 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none">
+            <input type="email" placeholder="La tua mail *" class="w-full p-4 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none">
+            <input type="tel" placeholder="Il tuo numero (se vuoi essere richiamato)" class="w-full p-4 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none">
+            <input type="text" placeholder="Oggetto *" class="w-full p-4 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none">
+            <textarea placeholder="Il tuo messaggio *" rows="5" class="w-full p-4 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none"></textarea>
+            
+            <label class="flex items-center space-x-2 text-sm text-slate-600">
+                <input type="checkbox" required class="w-4 h-4">
+                <span>Acconsento in base alla normativa europea 2016/679 *</span>
+            </label>
+            
+            <button class="w-full bg-slate-950 text-white p-4 rounded-lg font-bold hover:bg-slate-800 transition">INVIA</button>
         </form>
     </main>
 
     <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-                <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
-                <p class="text-stone-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
-            </div>
+            <div><h2 class="text-2xl font-bold text-stone-100">Curatori d'Immagine</h2></div>
             <div>
                 <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
                 <ul class="space-y-4 text-stone-500 text-sm">
-                    <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
-                    <li><a href="stellar.html" class="hover:text-stone-100 transition">Blockchain</a></li>
-                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Contatti</a></li>
-                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Saloon</a></li>
-                    <li><a href="contatti.html" class="hover:text-stone-100 transition">DAVINES</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stellar.html">Blockchain</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="contatti.html">Saloon</a></li>
+                    <li><a href="contatti.html">Davines</a></li>                    
                 </ul>
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-6 text-stone-100">Social</h3>
                 <div class="flex justify-center md:justify-start space-x-6 text-stone-500">
-                    <a href="#" class="hover:text-stone-100 transition">Instagram</a>
-                    <a href="#" class="hover:text-stone-100 transition">WhatsApp</a>
-                    <a href="#" class="hover:text-stone-100 transition">TikTok</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // Menu Hamburger
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
         closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+        // Effetto Zoom Immagine
+        const img = document.getElementById('contact-img');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            let scaleValue = 1 + (scrollY / 1000); // Zoom leggero
+            if (scaleValue > 1.2) scaleValue = 1.2;
+            img.style.transform = scale(${scaleValue});
+        });
     </script>
 </body>
 </html>
