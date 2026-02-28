@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style> 
         body { font-family: 'Inter', sans-serif; } 
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-stone-50 text-slate-950">
@@ -19,10 +20,9 @@
             </svg>
         </button>
         <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
-        <a href="saloon.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
+        <a href="salon.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Saloon</a>
         <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
-         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Davines</a>
     </div>
 
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
@@ -33,7 +33,7 @@
                     <circle cx="12" cy="12" r="3" />
                 </svg>
             </a>
-            <div class="text-xl font-bold tracking-widest uppercase italic">Saloon</div>
+            <div class="text-2xl font-bold tracking-widest uppercase italic">Saloon</div>
             <button id="menu-btn" class="hover:text-stone-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -42,12 +42,14 @@
         </div>
     </header>
 
-    <section class="h-[60vh] w-full overflow-hidden">
-        <img src="saloon.jpeg" alt="Il Saloon" class="w-full h-full object-cover">
+    <section class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-slate-950">
+        <img id="salon-img" src="saloon.jpeg" alt="Il Salone" 
+             class="w-full h-full object-cover transition-transform duration-75 ease-out will-change-transform">
+        <div class="absolute inset-0 bg-black/30"></div>
     </section>
 
     <main class="py-20 px-6 max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold mb-6">Benvenuti nel Saloon</h1>
+        <h1 class="text-4xl font-bold mb-6">Benvenuti nel Salone</h1>
         <p class="text-lg text-slate-700 leading-relaxed mb-8">
             Descrivi qui il tuo salone, la tua visione e perché è un posto speciale.
         </p>
@@ -55,21 +57,30 @@
 
     <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div><h2 class="text-2xl font-bold text-stone-100">Curatori d'Immagine</h2></div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
+            </div>
             <div>
                 <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
                 <ul class="space-y-4 text-stone-500 text-sm">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="saloon.html">Saloon</a></li>
-                    <li><a href="stellar.html">Blockchain</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                      <li><a href="contatti.html">Davines</a></li>
+                    <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
+                    <li><a href="salon.html" class="hover:text-stone-100 transition">Saloon</a></li>
+                    <li><a href="stellar.html" class="hover:text-stone-100 transition">Blockchain</a></li>
+                    <li><a href="contatti.html" class="hover:text-stone-100 transition">Contattaci</a></li>
                 </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Social</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-stone-500">
+                    <a href="#" class="hover:text-stone-100 transition">Instagram</a>
+                    <a href="#" class="hover:text-stone-100 transition">WhatsApp</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // Logica Menu Hamburger
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -78,6 +89,15 @@
             menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
             closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         }
+
+        // Script Zoom Immagine
+        const img = document.getElementById('salon-img');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            let scaleValue = 1 + (scrollY / 1000); 
+            if (scaleValue > 1.2) scaleValue = 1.2;
+            img.style.transform = scale(${scaleValue});
+        });
     </script>
 </body>
 </html>
