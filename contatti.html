@@ -6,12 +6,7 @@
     <title>Contattami | Curatori d'Immagine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.min.css">
-    <style> 
-        body { font-family: 'Inter', sans-serif; } 
-        /* Stile personalizzato per i placeholder del form */
-        ::placeholder { color: #a8a29e; opacity: 1; }
-    </style>
+    <style> body { font-family: 'Inter', sans-serif; } </style>
 </head>
 <body class="bg-stone-50 text-slate-900">
 
@@ -22,13 +17,14 @@
             </svg>
         </button>
         <a href="index.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Home</a>
-        <a href="stellar.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Blockchain</a>
+        <a href="#" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Prodotti Davines</a>
+        <a href="#" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Il salone</a>
         <a href="contatti.html" class="text-3xl font-light text-stone-100 hover:text-stone-400 transition">Contattaci</a>
     </div>
 
     <header class="bg-slate-950 border-b border-slate-800 p-6 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center text-stone-100">
-            <a href="index.html" class="opacity-70 hover:opacity-100 transition duration-300">
+            <a href="stellar.html" class="opacity-70 hover:opacity-100 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                     <circle cx="12" cy="12" r="3" />
@@ -48,19 +44,11 @@
             
             <div class="space-y-8">
                 <h1 class="text-5xl font-bold text-slate-950 mb-2 leading-tight">La prima call è gratuita!</h1>
-                
                 <div class="space-y-6 text-slate-700 text-lg leading-relaxed">
                     <p>Mandami un messaggio con le tue domande: rispondo a tutti entro 24 ore al massimo.</p>
                     <p class="font-semibold text-slate-900">Posso offrirti una CALL GRATUITA, nella quale potrai valutare se faccio per TE!</p>
                     <p>Durante l'incontro (via telefono o videocall) potrai condividere con me i tuoi bisogni, mentre io cercherò di illustrarti come potrei lavorare per te.</p>
                     <p>Nel caso, potremo redigere rapidamente un preventivo personalizzato in base alle tue necessità.</p>
-                </div>
-
-                <div class="flex space-x-5 pt-4">
-                    <a href="#" class="text-blue-600 hover:text-blue-800 transition text-2xl"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-sky-700 hover:text-sky-900 transition text-2xl"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="text-sky-500 hover:text-sky-700 transition text-2xl"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-sky-600 hover:text-sky-800 transition text-2xl"><i class="fab fa-telegram-plane"></i></a>
                 </div>
             </div>
 
@@ -68,33 +56,31 @@
                 <form action="#" method="POST" class="space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-slate-800 mb-2">Il tuo nome</label>
-                        <input type="text" placeholder="Es. Mario Rossi" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition placeholder:text-stone-400">
+                        <input type="text" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-800 mb-2">La tua mail *</label>
-                        <input type="email" required placeholder="Es. mario.rossi@mail.com" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition placeholder:text-stone-400">
+                        <input type="email" required class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-800 mb-2">Il tuo numero (opzionale)</label>
-                        <input type="tel" placeholder="Es. +39 333 1234567" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition placeholder:text-stone-400">
+                        <label class="block text-sm font-medium text-slate-800 mb-2">Il tuo numero (se vuoi essere richiamato)</label>
+                        <input type="tel" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-800 mb-2">Oggetto *</label>
-                        <input type="text" required placeholder="Es. Richiesta preventivo" class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition placeholder:text-stone-400">
+                        <input type="text" required class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-800 mb-2">Il tuo messaggio *</label>
-                        <textarea rows="4" required placeholder="Scrivi qui la tua richiesta..." class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition placeholder:text-stone-400"></textarea>
+                        <textarea rows="4" required class="w-full p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-slate-950 outline-none transition"></textarea>
                     </div>
-                    
                     <div class="flex items-start">
                         <input type="checkbox" required class="mt-1 h-4 w-4 text-slate-950 border-stone-300 rounded focus:ring-slate-950 cursor-pointer">
-                        <label class="ml-3 text-sm text-slate-600 underline cursor-pointer hover:text-slate-900 transition">
+                        <label class="ml-3 text-sm text-slate-600 underline cursor-pointer">
                             Acconsento in base alla normativa europea 2016/679 *
                         </label>
                     </div>
-
-                    <button type="submit" class="w-full bg-slate-950 text-stone-100 font-bold py-4 rounded-full hover:bg-slate-800 transition duration-300 uppercase tracking-widest text-sm">
+                    <button type="submit" class="w-full bg-slate-950 text-stone-100 font-bold py-4 rounded-full hover:bg-slate-800 transition duration-300">
                         INVIA
                     </button>
                 </form>
@@ -103,8 +89,26 @@
     </main>
 
     <footer class="bg-slate-950 border-t border-slate-800 py-16 px-6">
-        <div class="max-w-6xl mx-auto text-center text-stone-500">
-            <p>© 2026 Curatori d'Immagine</p>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h2 class="text-2xl font-bold mb-4 tracking-widest text-stone-100">Curatori d'Immagine</h2>
+                <p class="text-stone-500 text-sm">Blockchain Stellar. Trasparenza, sicurezza e velocità.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Navigazione</h3>
+                <ul class="space-y-4 text-stone-500 text-sm">
+                    <li><a href="index.html" class="hover:text-stone-100 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-stone-100 transition">Whitepaper</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-6 text-stone-100">Social</h3>
+                <div class="flex justify-center md:justify-start space-x-6 text-stone-500">
+                    <a href="#" class="hover:text-stone-100 transition">Instagram</a>
+                    <a href="#" class="hover:text-stone-100 transition">WhatsApp</a>
+                    <a href="#" class="hover:text-stone-100 transition">TikTok</a>
+                </div>
+            </div>
         </div>
     </footer>
 
