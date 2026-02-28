@@ -3,36 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Token | Black Edition</title>
+    <title>Il Mio Token | Premium Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000', // Nero Puro
-                        accent: '#FFFFFF',  // Bianco per il massimo contrasto
-                    }
-                }
-            }
-        }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-black text-gray-200">
+<body class="bg-black text-white">
 
     <header class="bg-black border-b border-gray-900 p-6 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-white text-2xl font-bold tracking-widest uppercase">TOKEN LOGO</div>
-            
+            <div class="text-2xl font-bold tracking-widest uppercase">TOKEN LOGO</div>
             <div class="hidden md:block">
                 <input type="text" placeholder="Cerca..." class="bg-transparent border border-gray-800 text-gray-400 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-white transition">
             </div>
-
-            <div class="text-white cursor-pointer">
+            <div class="cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -40,7 +26,7 @@
         </div>
     </header>
 
-    <section class="py-24 px-6 text-center">
+    <section class="py-24 px-6 text-center bg-black">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">Il Futuro del Valore</h1>
         <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
             Innovazione su blockchain Stellar. Design esclusivo, sicurezza totale, visione globale.
@@ -50,26 +36,28 @@
         </button>
     </section>
 
-    <section class="max-w-6xl mx-auto py-16 px-6">
-        <h2 class="text-3xl font-bold text-center text-white mb-12">Ecosistema</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
-                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 1</span></div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Governance</h3>
-                <p class="text-gray-400 text-sm mb-6">Decisioni decentralizzate sulla rete Stellar.</p>
-                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
-            </div>
-            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
-                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 2</span></div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Staking</h3>
-                <p class="text-gray-400 text-sm mb-6">Metti a rendita i tuoi asset in sicurezza.</p>
-                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
-            </div>
-            <div class="bg-zinc-900 border border-gray-800 p-8 rounded-2xl hover:border-white transition duration-300">
-                <div class="bg-black h-48 w-full rounded-xl mb-6 flex items-center justify-center border border-gray-800"><span class="text-gray-600">Immagine 3</span></div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Utility</h3>
-                <p class="text-gray-400 text-sm mb-6">Transazioni istantanee e commissioni zero.</p>
-                <button class="w-full py-3 bg-black border border-white text-white rounded-lg hover:bg-white hover:text-black transition">Scopri</button>
+    <section class="bg-stone-100 py-20 px-6 text-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Ecosistema</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 1</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Governance</h3>
+                    <p class="text-stone-600 text-sm mb-6">Decisioni decentralizzate sulla rete Stellar.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 2</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Staking</h3>
+                    <p class="text-stone-600 text-sm mb-6">Metti a rendita i tuoi asset in sicurezza.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-lg transition duration-300">
+                    <div class="bg-stone-200 h-48 w-full rounded-xl mb-6 flex items-center justify-center"><span class="text-stone-500">Immagine 3</span></div>
+                    <h3 class="text-xl font-semibold mb-2">Utility</h3>
+                    <p class="text-stone-600 text-sm mb-6">Transazioni istantanee e commissioni zero.</p>
+                    <button class="w-full py-3 bg-stone-900 text-white rounded-lg hover:bg-black transition">Scopri</button>
+                </div>
             </div>
         </div>
     </section>
