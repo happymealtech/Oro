@@ -29,7 +29,7 @@
     <section class="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-slate-950">
         <div id="sticky-container" class="sticky top-0 h-[100vh] w-full flex items-center justify-center">
             <img id="stellar-img" src="stellar.jpeg" alt="Visione Blockchain" 
-                 class="w-[40%] h-auto rounded-xl shadow-2xl transition-transform duration-75 ease-out will-change-transform">
+                 class="w-[60%] h-auto rounded-xl shadow-2xl transition-transform duration-75 ease-out will-change-transform">
         </div>
     </section>
 
@@ -100,10 +100,10 @@
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
-            let scaleValue = 0.4 + (scrollY / windowHeight);
+            // Calcolo scala: parte da 0.6 (dimensione iniziale) e cresce
+            let scaleValue = 0.6 + (scrollY / windowHeight);
             if (scaleValue > 1.5) scaleValue = 1.5;
             
-            // Corretto: aggiunte le backtick per il template literal
             img.style.transform = scale(${scaleValue});
         });
     </script>
